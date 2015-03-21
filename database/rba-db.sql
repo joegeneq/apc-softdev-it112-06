@@ -197,6 +197,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `password_reset_token`, `email`, `status`, `created_at`, `updated_at`, `user_lastname`, `user_firstname`, `user_midname`, `user_mobile`, `user_telephone`, `user_housenum`, `user_street`, `user_city`, `user_country`, `user_postalcode`, `user_gender`, `user_companyname`, `user_companyadd`, `user_companycontact`, `user_birthdate`, `user_age`, `user_type`) VALUES
 (2, 'jessica', 'mAUPMo6NlUUe3hviPPBdGefUBH9PyvLc', '$2y$13$9O7VKYbSlL62y/2W73S0mOyHzHDkmo.vsvLQVIHKcVtcbz1YMIFRO', NULL, 'martinezjecca@mail.com', 10, 1425913183, 1425913183, 'Martinez', 'Jessica', NULL, '', NULL, NULL, NULL, '', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, 'Client'),
 (3, 'Kayzelle', 'VNVMl94SN5m-sJQtEZT1-Jp7yqm2s7JT', '$2y$13$s3HXhao0oCEJUPT9Cjt3du6ShLF6SSiPKG7RKtJ7sdG7Un2lHCeEu', NULL, 'kayzellegabalfin@gmail.com', 10, 1426034711, 1426034711, 'Gabalfin', 'Kayzelle', NULL, '', NULL, NULL, NULL, '', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, 'Client');
+(4, 'Administrator', 'tzbozK4S2eX5bBix9AqGouaw53YwOmdd', '$2y$13$iTp0kXxoLXfUX.G0AcFvYO62fROSgxHhE4qLZYftSms/aUEC9eWYG', NULL, 'rbaconsultancy@gmail.com', 10, 1426951248, 1426951248, 'Consultancy', 'RBA', NULL, '', NULL, NULL, NULL, '', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, 'Client');
 
 --
 -- Indexes for dumped tables

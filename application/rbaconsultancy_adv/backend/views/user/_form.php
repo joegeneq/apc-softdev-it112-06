@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use dosamigos\datepicker\DatePicker;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\UserMain */
@@ -56,7 +57,17 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'user_companycontact')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'user_birthdate')->textInput() ?>
+	<?= $form->field($model, 'user_birthdate')->widget(
+    DatePicker::className(), [
+        // inline too, not bad
+         'inline' => false, 
+         // modify template for custom rendering
+        //'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
+        'clientOptions' => [
+            'autoclose' => true,
+            'format' => 'dd-M-yyyy'
+        ]
+	]);?>
 
     <?= $form->field($model, 'user_age')->textInput() ?>
 

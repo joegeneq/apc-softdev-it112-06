@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
+use dosamigos\datepicker\DatePicker;
 use common\models\UserMain;
 use common\models\ServiceList;
 
@@ -37,7 +38,17 @@ use common\models\ServiceList;
                                 ['prompt'=>'Select Service...'])->label('Service Acquired') ;
     ?>
 
-    <?= $form->field($model, 'service_dateapplied')->textInput()->label('Date Applied') ?>
+  	<?= $form->field($model, 'service_dateapplied')->widget(
+    DatePicker::className(), [
+        // inline too, not bad
+         'inline' => false, 
+         // modify template for custom rendering
+        //'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
+        'clientOptions' => [
+            'autoclose' => true,
+            'format' => 'dd-M-yyyy'
+        ]
+	]);?>
 
     <?= $form->field($model, 'service_status')->dropDownList([
                 'Pending' => 'Pending', 'Ongoing' => 'Ongoing', 'Completed' => 'Completed', 'Cancelled' => 'Cancelled'])

@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use common\models\ServiceList;
 use yii\helpers\ArrayHelper;
+use dosamigos\datepicker\DatePicker;
 use common\models\RequirementsList;
 use common\models\User;
 
@@ -52,7 +53,17 @@ $connection = \Yii::$app->db;
 
     <?= $form->field($model, 'rpu_fileuploaded')->textInput(['placeholder'=>'Do not fillout if not applicable', 'maxlength' => 255]) ?>
 
-    <?= $form->field($model, 'rpu_datefilesubmitted')->textInput() ?>
+   	<?= $form->field($model, 'rpu_datefilesubmitted')->widget(
+    DatePicker::className(), [
+        // inline too, not bad
+         'inline' => false, 
+         // modify template for custom rendering
+        //'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
+        'clientOptions' => [
+            'autoclose' => true,
+            'format' => 'dd-M-yyyy'
+        ]
+	]);?>
 
     <?php echo $form->field($model, 'rpu_status')->dropDownList(['Not Yet Submitted' => 'Not Yet Submitted', 'Submitted' => 'Submitted']); ?>
 

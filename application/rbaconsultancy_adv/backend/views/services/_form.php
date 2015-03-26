@@ -42,6 +42,7 @@ use common\models\ServiceList;
     DatePicker::className(), [
         // inline too, not bad
          'inline' => false, 
+		 'options' => ['placeholder' => 'Select Date of application ...'],
          // modify template for custom rendering
         //'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
         'clientOptions' => [

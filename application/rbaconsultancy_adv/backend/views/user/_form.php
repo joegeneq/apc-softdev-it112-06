@@ -21,7 +21,7 @@ use dosamigos\datepicker\DatePicker;
 
     <?= $form->field($model, 'password_reset_token')->textInput(['maxlength' => 255]) ?>
 
-    <?= $form->field($model, 'email')->textInput(['maxlength' => 255]) ?>
+    <?= $form->field($model, 'email')->textInput(['placeholder'=>'name@email.com', 'maxlength' => 255]) ?>
 
     <?= $form->field($model, 'status')->textInput() ?>
 
@@ -61,6 +61,7 @@ use dosamigos\datepicker\DatePicker;
     DatePicker::className(), [
         // inline too, not bad
          'inline' => false, 
+		 'options' => ['placeholder' => 'Select Birth Date ...'],
          // modify template for custom rendering
         //'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
         'clientOptions' => [

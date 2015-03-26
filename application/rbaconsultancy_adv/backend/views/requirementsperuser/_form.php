@@ -57,6 +57,7 @@ $connection = \Yii::$app->db;
     DatePicker::className(), [
         // inline too, not bad
          'inline' => false, 
+		 'options' => ['placeholder' => 'Select Date of Submission ...'],
          // modify template for custom rendering
         //'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
         'clientOptions' => [

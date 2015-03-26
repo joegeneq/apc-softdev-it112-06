@@ -46,44 +46,61 @@
 				</nav>
 				<div class="content">
 					<section id="section-1">
-						<div class="mediabox">
+						<div class="mediabox"> <div id="left">
 							<a href="./index.php?r=site%2Fservices_1">Conversion to Non-Quota Immigrant by Marriage</a>
 							<p>For a foreign national on the basis of his valid marriage to a Philippine citizen.</p>
-						</div>
-						<div class="mediabox">
-							<a href="#">Immigrant Visa 2</a>
-							<p>Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea.</p>
-						</div>
-						<div class="mediabox">
+						</div></div>
+						<div class="mediabox"><div id="right">
+							<a href="#">Conversion to Quota Immigrant</a>
+							<p>Nationals of countries which have diplomatic relations with the Philippines and grant the Filipinos the same immigration privileges under the principle of reciprocity which shall not be in excess of fifty (50) of any one nationality or without nationality for any one calendar year</p>
+						</div></div>
+						<div class="mediabox"><div id="center">
 							<a href="#">Immigrant Visa 3</a>
-							<p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
-						</div>
-						<div class="mediabox">
+							<p>Courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.</p>
+						</div></div>
+						<div class="clear"></div>
+						<div class="mediabox"><div id="left">
 							<a href="#">Immigrant Visa 4</a>
 							<p>Sushi gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.</p>
-						</div>
-						<div class="mediabox">
+						</div></div>
+						<div class="mediabox"><div id="right">
 							<a href="#">Immigrant Visa 5</a>
 							<p>Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea.</p>
-						</div>
+						</div></div>
 						<div class="mediabox">
-							<a href="#">Immigrant Visa 6</a>
+							<a href="#">Immigrant Visa 6</a><div id="center">
 							<p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
-						</div>
+						</div></div>
+						<div class="clear"></div>
 					</section>
 					<section id="section-2">
-						<div class="mediabox">
-							<a href="#">Extension of Pre-arranged Employee (Commercial)</a>
+						<div class="mediabox"><div id="left">
+							<a href="#">Extension of Pre-arranged Employee-Commercial (Commercial)</a>
 							<p>For foreign nationals who are existing holders of a Pre-arranged Employee – Commercial Visa and wishes to continue to his employment in the Philippines</p>
-						</div>
+						</div></div>
 						<div class="mediabox">
-							<a href="#">Non-Immigrant Visa 2</a>
-							<p>Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori. Grape wattle seed kombu beetroot horseradish carrot squash brussels sprout chard.</p>
-						</div>
+							<a href="#">Temporary Visa</a><div id="right">
+							<p>A foreign national whose country does not have an existing reciprocity agreement with the Philippines</p>
+						</div></div>
+						<div class="mediabox"><div id="center">
+							<a href="#">Conversion to Pre-arranged Employee-Commercial</a>
+							<p>Foreign nationals who are proceeding to Philippines to engage in any lawful occupation, whether for wages or salary or other forms of compensation.</p>
+						</div></div>
+						<div class="clear"></div>
+						
 						<div class="mediabox">
-							<a href="#">Non-Immigrant Visa 3</a>
+							<a href="#">Special Work Permit</a>
 							<p>Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori. </p>
 						</div>
+						<div class="mediabox">
+							<a href="#">Non-Immigrant Visa 6</a>
+							<p>Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori. </p>
+						</div>
+						<div class="mediabox">
+							<a href="#">Non-Immigrant Visa 7</a>
+							<p>Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori. </p>
+						</div>
+						
 					</section>
 					<section id="section-3">
 						<div class="mediabox">

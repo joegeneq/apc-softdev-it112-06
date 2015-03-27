@@ -32,7 +32,7 @@ class Services extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['service_id', 'user_id', 'slist_id'], 'required'],
+            [['user_id', 'slist_id'], 'required'],
             [['service_id', 'user_id', 'slist_id'], 'integer'],
             [['service_dateapplied'], 'safe'],
             [['service_status'], 'string', 'max' => 255]

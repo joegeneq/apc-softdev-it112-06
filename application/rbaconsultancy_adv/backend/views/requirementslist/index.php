@@ -2,7 +2,6 @@
 
 use yii\helpers\Html;
 use kartik\grid\GridView;
-use kartik\widgets\Select2;
 use yii\helpers\ArrayHelper;
 use common\models\ServiceList;
 

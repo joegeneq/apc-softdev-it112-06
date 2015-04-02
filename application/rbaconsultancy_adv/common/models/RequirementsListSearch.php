@@ -65,7 +65,7 @@ class RequirementsListSearch extends RequirementsList
 
         $query->andFilterWhere(['like', 'rlist_name', $this->rlist_name])
             ->andFilterWhere(['like', 'rlist_desc', $this->rlist_desc])
-			->andFilterWhere(['like', 'slist.slist_name', $this->slist_id]);
+			->andFilterWhere(['like', 'slist_name', $this->slist_id]);
         return $dataProvider;
     }
 }

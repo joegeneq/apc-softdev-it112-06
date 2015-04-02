@@ -28,7 +28,7 @@ use common\models\ServiceList;
 	        echo $form->field($model, 'slist_id')->dropDownList(
 	                                $listData,
 	                                ['prompt'=>'Select Service...'])->label('Service Name') ;
-	    ?>
+    ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

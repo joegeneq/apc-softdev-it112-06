@@ -55,17 +55,17 @@ class RequirementsListSearch extends RequirementsList
             return $dataProvider;
         }
 
-		$query->joinWith('slist');
+		//$query->joinWith('slist');
 		
         $query->andFilterWhere([
             'rlist_id' => $this->rlist_id,
             'rlist_dateadded' => $this->rlist_dateadded,
-          //  'slist_id' => $this->slist_id,
+            'slist_id' => $this->slist_id,
         ]);
 
         $query->andFilterWhere(['like', 'rlist_name', $this->rlist_name])
-            ->andFilterWhere(['like', 'rlist_desc', $this->rlist_desc])
-			->andFilterWhere(['like', 'slist_name', $this->slist_id]);
+            ->andFilterWhere(['like', 'rlist_desc', $this->rlist_desc]);
+			//->andFilterWhere(['like', 'slist_name', $this->slist_id]);
         return $dataProvider;
     }
 }

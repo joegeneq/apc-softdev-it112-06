@@ -31,10 +31,10 @@ class PriceList extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['plist_id', 'plist_name', 'plist_price', 'slist_id'], 'required'],
+            [['plist_name', 'plist_price', 'slist_id'], 'required'],
             [['plist_id', 'slist_id'], 'integer'],
             [['plist_price'], 'number'],
-            [['plist_dateadded'], 'safe'],
+            [['plist_id','plist_dateadded'], 'safe'],
             [['plist_name'], 'string', 'max' => 255]
         ];
     }

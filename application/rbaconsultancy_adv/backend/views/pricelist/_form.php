@@ -14,13 +14,13 @@ use common\models\ServiceList;
 
     <?php $form = ActiveForm::begin(); ?>
 
-   <!--- <?= $form->field($model, 'plist_id')->textInput() ?> --->
+   <!--- <?= $form->field($model, 'plist_id')->textInput() ?> -->
+
+   <!--- <?= $form->field($model, 'plist_dateadded')->textInput() ?> -->
 
     <?= $form->field($model, 'plist_name')->textInput(['maxlength' => 255])->label('Price Name') ?>
 
     <?= $form->field($model, 'plist_price')->textInput()->label('Cost of Service') ?>
-
-   <!--- <?= $form->field($model, 'plist_dateadded')->textInput() ?> --->
 
     <?php
 	        $ServiceList=ServiceList::find()->all();

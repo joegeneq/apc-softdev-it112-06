@@ -53,7 +53,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ['class' => 'kartik\grid\ActionColumn'],
     ];
 
-      echo GridView::widget([
+    echo GridView::widget([
         'dataProvider'=> $dataProvider,
         'filterModel' => $searchModel,
         'columns' => $gridColumns,

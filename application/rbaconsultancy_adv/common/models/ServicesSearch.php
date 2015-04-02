@@ -55,18 +55,18 @@ class ServicesSearch extends Services
             return $dataProvider;
         }
 
-        $query->joinWith('user', 'servicelist');
+        //$query->joinWith('user', 'servicelist');
 
         $query->andFilterWhere([
             'service_id' => $this->service_id,
-            //'user_id' => $this->user_id,
-            //'slist_id' => $this->slist_id,
+            'user_id' => $this->user_id,
+            'slist_id' => $this->slist_id,
             'service_dateapplied' => $this->service_dateapplied,
         ]);
 
-        $query->andFilterWhere(['like', 'service_status', $this->service_status])
-                ->andFilterWhere(['like', 'user.username', $this->user_id])
-                ->andFilterWhere(['like', 'servicelist.slist_name', $this->slist_id]);
+        $query->andFilterWhere(['like', 'service_status', $this->service_status]);
+             //   ->andFilterWhere(['like', 'user.username', $this->user_id]);
+             //   ->andFilterWhere(['like', 'servicelist.slist_name', $this->slist_id]);
 
         return $dataProvider;
     }

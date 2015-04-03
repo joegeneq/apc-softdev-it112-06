@@ -78,7 +78,11 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->redirect('index.php');
+            if(Yii::$app->user->can('access-backend')) {
+                return $this->redirect('http://localhost/rbaconsultancy_adv/backend/web/index.php');
+            } else {
+                return $this->redirect('index.php');
+            }
         } else {
             return $this->render('login', [
                 'model' => $model,

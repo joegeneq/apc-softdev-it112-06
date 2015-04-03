@@ -8,7 +8,6 @@
                     <li><a href="./index.php?r=site%2Fcontact">Contact</a></li>
                   <?php
                     echo "<li class=\"active\"><a href=\"./index.php?r=site%2Fmy-account\">My Account</a></li>" ;
-                    echo "<li><a href=\"http://localhost/rbaconsultancy_adv/backend/web/index.php\" target=\"_blank\">Admin's Panel</a></li>" ;
                     echo "<li><a href=\"./index.php?r=site%2Flogout\">Logout, " . (Yii::$app->user->identity->username) . "</a></li>" ;
                   ?>                   
                 </ul>

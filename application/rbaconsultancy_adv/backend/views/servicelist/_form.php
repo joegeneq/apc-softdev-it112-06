@@ -12,7 +12,7 @@ use yii\helpers\ArrayHelper;
 
     <?php $form = ActiveForm::begin(); ?>
 
-   <!-- <?= $form->field($model, 'slist_id')->textInput() ?> -->
+    <?= $form->field($model, 'slist_id')->textInput(array('readonly' => true, 'placeholder' => 'Service ID is auto-generated.')) ?>
 
     <?= $form->field($model, 'slist_name')->textInput(['maxlength' => 255])->label('Service Name') ?>
 

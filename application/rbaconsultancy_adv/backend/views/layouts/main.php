@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
+//use kartik\icons\Icon;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -39,7 +40,7 @@ AppAsset::register($this);
                 $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
             } else {
                 $menuItems = [
-                    ['label' => 'Home', 'url' => ['/site/index']],
+                    ['label' => /*Icon::show('home') . */'Home', 'url' => ['/site/index']],
                     ['label' => 'Administration', 'items' => [
                         ['label' => 'Users', 'url' => ['/user/index']],
                         ['label' => 'Visa Transactions', 'url' => ['/services/index']],
@@ -57,6 +58,7 @@ AppAsset::register($this);
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'items' => $menuItems,
+                'encodeLabels' => false,
             ]);
             NavBar::end();
         ?>

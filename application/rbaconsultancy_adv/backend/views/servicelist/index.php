@@ -1,7 +1,8 @@
 <?php
 
 use yii\helpers\Html;
-use yii\grid\GridView;
+use kartik\grid\GridView;
+
 
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\ServicelistSearch */
@@ -12,27 +13,47 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="servicelist-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <?php 
 
-    <p>
-        <?= Html::a('Create Service', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+    $gridColumns = [
+        [
+            'class'=>'kartik\grid\SerialColumn',
+            'contentOptions'=>['class'=>'kartik-sheet-style'],
+            'header'=>'',
+            'headerOptions'=>['class'=>'kartik-sheet-style']
+        ],
 
             //'slist_id',
-			['attribute' => 'slist_name', 'label' => 'Service Name'],
-			['attribute' => 'slist_desc', 'label' => 'Service Description'],
-			['attribute' => 'slist_type', 'label' => 'Service Type'],
+            ['attribute' => 'slist_name', 'label' => 'Service Name'],
+            ['attribute' => 'slist_desc', 'label' => 'Service Description'],
+            ['attribute' => 'slist_type', 'label' => 'Service Type'],
             ['attribute' => 'slist_dateadded', 'label' => 'Service Date Added'], 
 
-            ['class' => 'yii\grid\ActionColumn'],
+
+        ['class' => 'kartik\grid\ActionColumn'],
+    ];
+
+    echo GridView::widget([
+        'dataProvider'=> $dataProvider,
+        'filterModel' => $searchModel,
+        'columns' => $gridColumns,
+        'responsive'=>true,
+        'hover'=>true,
+
+        'containerOptions' => ['style'=>'overflow: auto'], // only set when $responsive = false
+        'headerRowOptions'=>['class'=>'kartik-sheet-style'],
+        'filterRowOptions'=>['class'=>'kartik-sheet-style'],
+        'pjax' => true, 
+        'floatHeader'=>true,
+        'panel' => [
+            'heading'=>'<h3 class="panel-title"><i class="glyphicon glyphicon-list-alt"></i>&nbsp&nbsp List of Available Services</h3>',
+            'type'=>GridView::TYPE_PRIMARY,
+            'before'=>Html::a('<i class="glyphicon glyphicon-plus"></i> Add New Service', ['create'], ['class' => 'btn btn-success']),
+            'after'=>Html::a('<i class="glyphicon glyphicon-repeat"></i> Reset Grid', ['index'], ['class' => 'btn btn-info']),
         ],
-    ]); ?>
+
+    ]); 
+
+    ?>
 
 </div>

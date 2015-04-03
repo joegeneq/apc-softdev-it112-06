@@ -38,7 +38,7 @@ AppAsset::register($this);
 
             if (Yii::$app->user->isGuest) {
                 $menuItems[] = ['label' => Icon::show('leaf') . 'Login', 'url' => ['/site/login']];
-            } else {
+            } elseif (Yii::$app->user->can('access-backend')) {
                 $menuItems = [
                     ['label' => Icon::show('home') . 'Home', 'url' => ['/site/index']],
                     ['label' => Icon::show('tower') . 'Administration', 'items' => [

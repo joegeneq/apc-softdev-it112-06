@@ -8,6 +8,7 @@ use common\models\ServicelistSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\ForbiddenHttpException;
 
 /**
  * ServicelistController implements the CRUD actions for Servicelist model.
@@ -32,13 +33,17 @@ class ServicelistController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new ServicelistSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        if (Yii::$app->user->can('access-backend')) {    
+            $searchModel = new ServicelistSearch();
+            $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
+            return $this->render('index', [
+                'searchModel' => $searchModel,
+                'dataProvider' => $dataProvider,
+            ]);
+        } else {
+            throw new ForbiddenHttpException("Sorry. You are not allow to access this page. For admin only.");
+        }
     }
 
     /**
@@ -60,14 +65,18 @@ class ServicelistController extends Controller
      */
     public function actionCreate()
     {
-        $model = new Servicelist();
+        if (Yii::$app->user->can('create-service')) {
+            $model = new Servicelist();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['index']);
+            if ($model->load(Yii::$app->request->post()) && $model->save()) {
+                return $this->redirect(['index']);
+            } else {
+                return $this->render('create', [
+                    'model' => $model,
+                ]);
+            }
         } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
+            throw new ForbiddenHttpException("Sorry. You are not allow to access this page. For admin only.");
         }
     }
 

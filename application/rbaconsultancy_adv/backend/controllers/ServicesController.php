@@ -32,13 +32,17 @@ class ServicesController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new ServicesSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        if (Yii::$app->user->can('access-backend')) {  
+            $searchModel = new ServicesSearch();
+            $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
+            return $this->render('index', [
+                'searchModel' => $searchModel,
+                'dataProvider' => $dataProvider,
+            ]);
+        } else {
+            throw new ForbiddenHttpException("Sorry. You are not allow to access this page. For admin only.");
+        }
     }
 
     /**

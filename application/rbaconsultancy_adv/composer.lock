@@ -4,20 +4,20 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0a99314b84901c79977403d8f4d0e0fd",
+    "hash": "9d9587cd3369d872c21563844f6e6195",
     "packages": [
         {
             "name": "2amigos/yii2-date-picker-widget",
-            "version": "1.0.4",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/2amigos/yii2-date-picker-widget.git",
-                "reference": "c61989074044185f35cb47379e8715b9729c5674"
+                "reference": "89cd0d7f00785b608b4a9670016f2795f2e3984d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/2amigos/yii2-date-picker-widget/zipball/c61989074044185f35cb47379e8715b9729c5674",
-                "reference": "c61989074044185f35cb47379e8715b9729c5674",
+                "url": "https://api.github.com/repos/2amigos/yii2-date-picker-widget/zipball/89cd0d7f00785b608b4a9670016f2795f2e3984d",
+                "reference": "89cd0d7f00785b608b4a9670016f2795f2e3984d",
                 "shasum": ""
             },
             "require": {
@@ -65,7 +65,7 @@
                 "yii 2",
                 "yii2"
             ],
-            "time": "2015-03-23 20:47:25"
+            "time": "2015-04-02 11:48:05"
         },
         {
             "name": "bower-asset/bootstrap",
@@ -412,6 +412,54 @@
             "time": "2013-11-30 08:25:19"
         },
         {
+            "name": "fortawesome/font-awesome",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FortAwesome/Font-Awesome.git",
+                "reference": "a49b0c70b54d6203de9785c39b57a8fc8d521c44"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/a49b0c70b54d6203de9785c39b57a8fc8d521c44",
+                "reference": "a49b0c70b54d6203de9785c39b57a8fc8d521c44",
+                "shasum": ""
+            },
+            "require-dev": {
+                "jekyll": "1.0.2",
+                "lessc": "1.4.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OFL-1.1",
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dave Gandy",
+                    "email": "dave@fontawesome.io",
+                    "homepage": "http://twitter.com/davegandy",
+                    "role": "Developer"
+                }
+            ],
+            "description": "The iconic font and CSS framework",
+            "homepage": "http://fontawesome.io/",
+            "keywords": [
+                "FontAwesome",
+                "awesome",
+                "bootstrap",
+                "font",
+                "icon"
+            ],
+            "time": "2015-03-30 22:08:26"
+        },
+        {
             "name": "kartik-v/bootstrap-fileinput",
             "version": "v4.1.8",
             "source": {
@@ -720,6 +768,53 @@
                 "yii2"
             ],
             "time": "2015-03-25 08:14:18"
+        },
+        {
+            "name": "kartik-v/yii2-icons",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kartik-v/yii2-icons.git",
+                "reference": "29e72f6e432af729f6d6a6ccaceb0d1bc8d81e55"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kartik-v/yii2-icons/zipball/29e72f6e432af729f6d6a6ccaceb0d1bc8d81e55",
+                "reference": "29e72f6e432af729f6d6a6ccaceb0d1bc8d81e55",
+                "shasum": ""
+            },
+            "require": {
+                "fortawesome/font-awesome": "*",
+                "kartik-v/yii2-krajee-base": "*",
+                "yiisoft/yii2-jui": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "kartik\\icons\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD 3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kartik Visweswaran",
+                    "email": "kartikv2@gmail.com",
+                    "homepage": "http://demos.krajee.com/"
+                }
+            ],
+            "description": "Set of icon frameworks for use in Yii Framework 2.0",
+            "homepage": "https://github.com/kartik-v/yii2-icons",
+            "keywords": [
+                "extension",
+                "font",
+                "icon",
+                "yii",
+                "yii2"
+            ],
+            "time": "2015-02-26 14:25:16"
         },
         {
             "name": "kartik-v/yii2-krajee-base",
@@ -2041,6 +2136,49 @@
             "time": "2015-03-01 06:22:44"
         },
         {
+            "name": "yiisoft/yii2-jui",
+            "version": "2.0.0-beta",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-jui.git",
+                "reference": "24626ae44d56b86275e2dcdadf874bc21028a9f8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-jui/zipball/24626ae44d56b86275e2dcdadf874bc21028a9f8",
+                "reference": "24626ae44d56b86275e2dcdadf874bc21028a9f8",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "yii\\jui\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Qiang Xue",
+                    "email": "qiang.xue@gmail.com",
+                    "homepage": "http://www.yiiframework.com/",
+                    "role": "Founder and project lead"
+                }
+            ],
+            "description": "The Jquery UI extension for the Yii framework",
+            "keywords": [
+                "jQuery UI",
+                "renderer",
+                "yii2"
+            ],
+            "time": "2014-04-13 21:58:59"
+        },
+        {
             "name": "yiisoft/yii2-swiftmailer",
             "version": "2.0.3",
             "source": {
@@ -2398,7 +2536,10 @@
         "kartik-v/yii2-mpdf": 20,
         "kartik-v/yii2-editable": 20,
         "kartik-v/yii2-widget-colorinput": 20,
-        "kartik-v/yii2-widgets": 20
+        "kartik-v/yii2-widgets": 20,
+        "yiisoft/yii2-jui": 20,
+        "fortawesome/font-awesome": 20,
+        "kartik-v/yii2-icons": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -46,7 +46,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'pjax' => true, 
         'floatHeader'=>true,
         'panel' => [
-            'heading'=>'<h3 class="panel-title"><i class="glyphicon glyphicon-list-alt"></i>&nbsp&nbsp List of Available Services</h3>',
+            'heading'=>'<h3 class="panel-title"><i class="glyphicon glyphicon-list"></i>&nbsp&nbsp List of Available Services</h3>',
             'type'=>GridView::TYPE_PRIMARY,
             'before'=>Html::a('<i class="glyphicon glyphicon-plus"></i> Add New Service', ['create'], ['class' => 'btn btn-success']),
             'after'=>Html::a('<i class="glyphicon glyphicon-repeat"></i> Reset Grid', ['index'], ['class' => 'btn btn-info']),

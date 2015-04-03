@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
-//use kartik\icons\Icon;
+use kartik\icons\Icon;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -33,23 +33,23 @@ AppAsset::register($this);
                 ],
             ]);
             $menuItems = [
-                ['label' => 'Home', 'url' => ['/site/index']],
+                ['label' => Icon::show('home') . 'Home', 'url' => ['/site/index']],
             ];
 
             if (Yii::$app->user->isGuest) {
-                $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+                $menuItems[] = ['label' => Icon::show('leaf') . 'Login', 'url' => ['/site/login']];
             } else {
                 $menuItems = [
-                    ['label' => /*Icon::show('home') . */'Home', 'url' => ['/site/index']],
-                    ['label' => 'Administration', 'items' => [
-                        ['label' => 'Users', 'url' => ['/user/index']],
-                        ['label' => 'Visa Transactions', 'url' => ['/services/index']],
-                        ['label' => 'Services List', 'url' => ['/servicelist/index']],
-                        ['label' => 'Requirements List', 'url' => ['/requirementslist/index']],
-                        ['label' => 'Requirements Per User', 'url' => ['/requirementsperuser/index']],
-                        ['label' => 'Price List', 'url' => ['/pricelist/index']]
+                    ['label' => Icon::show('home') . 'Home', 'url' => ['/site/index']],
+                    ['label' => Icon::show('tower') . 'Administration', 'items' => [
+                        ['label' => Icon::show('user') . 'Users', 'url' => ['/user/index']],
+                        ['label' => Icon::show('plane') . 'Visa Transactions', 'url' => ['/services/index']],
+                        ['label' => Icon::show('list') . 'Services List', 'url' => ['/servicelist/index']],
+                        ['label' => Icon::show('list-alt') . 'Requirements List', 'url' => ['/requirementslist/index']],
+                        ['label' => Icon::show('folder-open') . 'Requirements Per User', 'url' => ['/requirementsperuser/index']],
+                        ['label' => Icon::show('dashboard') . 'Price List', 'url' => ['/pricelist/index']]
                     ]],
-                    ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',
+                    ['label' => Icon::show('leaf') . 'Logout (' . Yii::$app->user->identity->username . ')',
                         'url' => ['/site/logout'],
                         'linkOptions' => ['data-method' => 'post']],
                 ];

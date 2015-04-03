@@ -103,7 +103,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'pjax' => true, 
         'floatHeader'=>true,
         'panel' => [
-            'heading'=>'<h3 class="panel-title"><i class="glyphicon glyphicon-list-alt"></i>&nbsp&nbsp Requirements Per User</h3>',
+            'heading'=>'<h3 class="panel-title"><i class="glyphicon glyphicon-folder-open"></i>&nbsp&nbsp Requirements Per User</h3>',
             'type'=>GridView::TYPE_PRIMARY,
             'before'=>Html::tag('p', '*This is auto-generated when a client applied for Visa.'),
             'after'=>Html::a('<i class="glyphicon glyphicon-repeat"></i> Reset Grid', ['index'], ['class' => 'btn btn-info']),

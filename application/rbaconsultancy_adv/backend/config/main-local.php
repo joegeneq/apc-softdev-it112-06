@@ -8,12 +8,17 @@ $config = [
         ],
     ],
 
-        'modules' => [
+    'modules' => [
         'gridview' =>  [
         'class' => '\kartik\grid\Module'
             ]
         ],
+    'params' => [
+        'icon-framework' => 'bsg'  // set elusive icon font as default framework
+    ],        
 ];
+
+
 
 if (!YII_ENV_TEST) {
     // configuration adjustments for 'dev' environment

@@ -24,7 +24,10 @@
         "kartik-v/yii2-mpdf": "@dev",	
         "kartik-v/yii2-editable": "@dev",
         "kartik-v/yii2-widget-colorinput": "@dev",
-        "kartik-v/yii2-widgets": "@dev"
+        "kartik-v/yii2-widgets": "@dev",
+        "yiisoft/yii2-jui": "@dev",
+        "fortawesome/font-awesome": "@dev",
+        "kartik-v/yii2-icons": "@dev"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

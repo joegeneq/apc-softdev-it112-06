@@ -15,9 +15,7 @@ use Yii;
  * @property integer $user_id
  * @property integer $service_id
  *
- * @property User $user
  * @property RequirementsList $rlist
- * @property Services $service
  */
 class RequirementsPerUser extends \yii\db\ActiveRecord
 {
@@ -48,22 +46,14 @@ class RequirementsPerUser extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'rpu_id' => 'ID',
-            'rpu_status' => 'Status',
-            'rpu_datefilesubmitted' => 'Date Submitted',
-            'rpu_fileuploaded' => 'File Uploaded',
-            'rlist_id' => 'Submitted Requirement',
-            'user_id' => 'Submitted by',
-            'service_id' => 'Service Acquired',
+            'rpu_id' => 'Rpu ID',
+            'rpu_status' => 'Rpu Status',
+            'rpu_datefilesubmitted' => 'Rpu Datefilesubmitted',
+            'rpu_fileuploaded' => 'Rpu Fileuploaded',
+            'rlist_id' => 'Rlist ID',
+            'user_id' => 'User ID',
+            'service_id' => 'Service ID',
         ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getUser()
-    {
-        return $this->hasOne(User::className(), ['id' => 'user_id']);
     }
 
     /**
@@ -72,13 +62,5 @@ class RequirementsPerUser extends \yii\db\ActiveRecord
     public function getRlist()
     {
         return $this->hasOne(RequirementsList::className(), ['rlist_id' => 'rlist_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getService()
-    {
-        return $this->hasOne(Services::className(), ['service_id' => 'service_id']);
     }
 }

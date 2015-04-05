@@ -4,8 +4,6 @@ use yii\helpers\Html;
 use kartik\grid\GridView;
 use yii\helpers\ArrayHelper;
 use common\models\RequirementsList;
-use common\models\UserMain;
-use common\models\ServiceList;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\RequirementsPerUserSearch */
@@ -26,49 +24,16 @@ $this->params['breadcrumbs'][] = $this->title;
             'headerOptions'=>['class'=>'kartik-sheet-style']
         ],
 
-        [
-            'attribute'=>'user_id', 
-            'width'=>'250px',
-             'value'=>function ($model, $key, $index, $widget) { 
-                return Html::a($model->user->username,  
-                    '#', 
-                    ['title'=>'View author detail', 'onclick'=>'alert("This will open the author page.\n\nDisabled for this demo!")']);
-            },
-            'vAlign'=>'middle',
-            'filterType'=>GridView::FILTER_SELECT2,
-            'filter'=>ArrayHelper::map(UserMain::find()->orderBy('username')->asArray()->all(), 'id', 'username'), 
-            'filterWidgetOptions'=>[
-                'pluginOptions'=>['allowClear'=>true],
-                ],
-            'filterInputOptions'=>['placeholder'=>'Select Client'],
-            'format'=>'raw',
-            'label' => 'Acquired by',
-        ],
 
-       [
-            'attribute'=>'service_id', 
-            'width'=>'250px',
-             'value'=>function ($model, $key, $index, $widget) { 
-                return Html::a($model->slist->slist_name,  
-                    '#', 
-                    ['title'=>'View author detail', 'onclick'=>'alert("This will open the author page.\n\nDisabled for this demo!")']);
-            },
-            'vAlign'=>'middle',
-            'filterType'=>GridView::FILTER_SELECT2,
-            'filter'=>ArrayHelper::map(ServiceList::find()->orderBy('slist_name')->asArray()->all(), 'slist_id', 'slist_name'), 
-            'filterWidgetOptions'=>[
-                'pluginOptions'=>['allowClear'=>true],
-                ],
-            'filterInputOptions'=>['placeholder'=>'Select Service'],
-            'format'=>'raw',
-            'label' => 'Service',
-        ],
+            //'rpu_id',
+            'service_id',
+            'user_id',
 
         [
             'attribute'=>'rlist_id', 
             'width'=>'250px',
              'value'=>function ($model, $key, $index, $widget) { 
-                return Html::a($model->requirementslist->rlist_name,  
+                return Html::a($model->rlist->rlist_name,  
                     '#', 
                     ['title'=>'View author detail', 'onclick'=>'alert("This will open the author page.\n\nDisabled for this demo!")']);
             },

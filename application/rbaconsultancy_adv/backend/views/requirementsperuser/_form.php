@@ -2,15 +2,6 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use common\models\ServiceList;
-use yii\helpers\ArrayHelper;
-use dosamigos\datepicker\DatePicker;
-use common\models\RequirementsList;
-use common\models\User;
-
-use yii\db\Query;
-$connection = \Yii::$app->db;
-
 
 /* @var $this yii\web\View */
 /* @var $model common\models\RequirementsPerUser */
@@ -21,54 +12,17 @@ $connection = \Yii::$app->db;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?php
-            $user=User::find()->all();
-    
-            $listData=ArrayHelper::map($user,'id', 'user_firstname', 'user_lastname');
-    
-            echo $form->field($model, 'user_id')->dropDownList(
-                                    $listData,
-                                    ['prompt'=>'Select Client...']);
-    ?>
+    <?= $form->field($model, 'rpu_status')->textInput(['maxlength' => 255]) ?>
 
-    <?php
-            $service=ServiceList::find()->all();
-    
-            $listData=ArrayHelper::map($service,'slist_id','slist_name');
-    
-            echo $form->field($model, 'service_id')->dropDownList(
-                                    $listData,
-                                    ['prompt'=>'Select Service...']);
-    ?>
+    <?= $form->field($model, 'rpu_datefilesubmitted')->textInput() ?>
 
-    <?php
-            $requirement=RequirementsList::find()->all();
-    
-            $listData=ArrayHelper::map($requirement,'rlist_id','rlist_name');
-    
-            echo $form->field($model, 'rlist_id')->dropDownList(
-                                    $listData,
-                                    ['prompt'=>'Select Requirement...']);
-    ?>
+    <?= $form->field($model, 'rpu_fileuploaded')->textInput(['maxlength' => 255]) ?>
 
-    <?= $form->field($model, 'rpu_fileuploaded')->textInput(['placeholder'=>'Do not fillout if not applicable', 'maxlength' => 255]) ?>
+    <?= $form->field($model, 'rlist_id')->textInput() ?>
 
-   	<?= $form->field($model, 'rpu_datefilesubmitted')->widget(
-    DatePicker::className(), [
-        // inline too, not bad
-         'inline' => false, 
-		 'options' => ['placeholder' => 'Select Date of Submission ...'],
-         // modify template for custom rendering
-        //'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
-        'clientOptions' => [
-            'autoclose' => true,
-            'format' => 'dd-M-yyyy'
-        ]
-	]);?>
+    <?= $form->field($model, 'user_id')->textInput() ?>
 
-    <?php echo $form->field($model, 'rpu_status')->dropDownList(['Not Yet Submitted' => 'Not Yet Submitted', 'Submitted' => 'Submitted']); ?>
-
-
+    <?= $form->field($model, 'service_id')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

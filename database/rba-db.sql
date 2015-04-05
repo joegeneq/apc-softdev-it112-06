@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 11, 2015 at 03:14 AM
+-- Generation Time: Apr 05, 2015 at 01:19 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -19,6 +19,74 @@ SET time_zone = "+00:00";
 --
 -- Database: `rba-db`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `auth_assignment`
+--
+
+CREATE TABLE IF NOT EXISTS `auth_assignment` (
+  `item_name` varchar(64) NOT NULL,
+  `user_id` varchar(64) NOT NULL,
+  `created_at` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `auth_assignment`
+--
+
+INSERT INTO `auth_assignment` (`item_name`, `user_id`, `created_at`) VALUES
+('access-backend', '1', NULL),
+('create-service', '1', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `auth_item`
+--
+
+CREATE TABLE IF NOT EXISTS `auth_item` (
+  `name` varchar(64) NOT NULL,
+  `type` int(11) NOT NULL,
+  `description` text,
+  `rule_name` varchar(64) DEFAULT NULL,
+  `data` text,
+  `created_at` int(11) DEFAULT NULL,
+  `updated_at` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `auth_item`
+--
+
+INSERT INTO `auth_item` (`name`, `type`, `description`, `rule_name`, `data`, `created_at`, `updated_at`) VALUES
+('access-backend', 1, 'allow access to backend', NULL, NULL, NULL, NULL),
+('create-service', 1, 'allow a user to add service', NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `auth_item_child`
+--
+
+CREATE TABLE IF NOT EXISTS `auth_item_child` (
+  `parent` varchar(64) NOT NULL,
+  `child` varchar(64) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `auth_rule`
+--
+
+CREATE TABLE IF NOT EXISTS `auth_rule` (
+  `name` varchar(64) NOT NULL,
+  `data` text,
+  `created_at` int(11) DEFAULT NULL,
+  `updated_at` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -107,13 +175,27 @@ INSERT INTO `requirements_list` (`rlist_id`, `rlist_name`, `rlist_desc`, `rlist_
 
 CREATE TABLE IF NOT EXISTS `requirements_per_user` (
 `rpu_id` int(11) NOT NULL,
-  `rpu_status` varchar(255) NOT NULL,
+  `rpu_status` varchar(255) NOT NULL DEFAULT 'Not Yet Submitted',
   `rpu_datefilesubmitted` timestamp NULL DEFAULT NULL,
   `rpu_fileuploaded` varchar(255) DEFAULT NULL,
   `rlist_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `service_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `requirements_per_user`
+--
+
+INSERT INTO `requirements_per_user` (`rpu_id`, `rpu_status`, `rpu_datefilesubmitted`, `rpu_fileuploaded`, `rlist_id`, `user_id`, `service_id`) VALUES
+(29, 'Not Yet Submitted', NULL, NULL, 7, 3, 5),
+(30, 'Not Yet Submitted', NULL, NULL, 13, 3, 5),
+(31, 'Not Yet Submitted', NULL, NULL, 27, 3, 5),
+(32, 'Not Yet Submitted', NULL, NULL, 28, 3, 5),
+(33, 'Not Yet Submitted', NULL, NULL, 29, 3, 5),
+(34, 'Not Yet Submitted', NULL, NULL, 30, 3, 5),
+(35, 'Not Yet Submitted', NULL, NULL, 31, 3, 5),
+(36, 'Not Yet Submitted', NULL, NULL, 32, 3, 5);
 
 -- --------------------------------------------------------
 
@@ -127,7 +209,27 @@ CREATE TABLE IF NOT EXISTS `services` (
   `slist_id` int(11) NOT NULL,
   `service_dateapplied` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `service_status` varchar(255) NOT NULL DEFAULT 'Pending'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `services`
+--
+
+INSERT INTO `services` (`service_id`, `user_id`, `slist_id`, `service_dateapplied`, `service_status`) VALUES
+(5, 3, 3, '0000-00-00 00:00:00', 'Pending');
+
+--
+-- Triggers `services`
+--
+DELIMITER //
+CREATE TRIGGER `after_insert_service` AFTER INSERT ON `services`
+ FOR EACH ROW BEGIN
+
+		INSERT INTO requirements_per_user (rlist_id, user_id, service_id) SELECT requirements_list.rlist_id, services.user_id, services.service_id FROM `requirements_list`, `service_list`, `services` WHERE requirements_list.slist_id = service_list.slist_id and services.slist_id = service_list.slist_id and services.user_id = NEW.user_id;
+		
+    END
+//
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -195,13 +297,37 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `password_reset_token`, `email`, `status`, `created_at`, `updated_at`, `user_lastname`, `user_firstname`, `user_midname`, `user_mobile`, `user_telephone`, `user_housenum`, `user_street`, `user_city`, `user_country`, `user_postalcode`, `user_gender`, `user_companyname`, `user_companyadd`, `user_companycontact`, `user_birthdate`, `user_age`, `user_type`) VALUES
+(1, 'Administrator', '1W4u1_HcePQR7B68P3APwwVOLoDcWzeo', '$2y$13$eWB9VM3HSlG81.1CYAGBP.iyLcDB0ylPWIHoOCJgo91h3S3/Qv7zi', '', 'admin@email.com', 10, 1428038869, 1428038869, 'Admin', 'Admin', '', '09153480313', '09153480313', '', 'Pasay', 'Pasay City', 'Philippines', 0, '', '', '', '', NULL, NULL, 'Admin'),
 (2, 'jessica', 'mAUPMo6NlUUe3hviPPBdGefUBH9PyvLc', '$2y$13$9O7VKYbSlL62y/2W73S0mOyHzHDkmo.vsvLQVIHKcVtcbz1YMIFRO', NULL, 'martinezjecca@mail.com', 10, 1425913183, 1425913183, 'Martinez', 'Jessica', NULL, '', NULL, NULL, NULL, '', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, 'Client'),
-(3, 'Kayzelle', 'VNVMl94SN5m-sJQtEZT1-Jp7yqm2s7JT', '$2y$13$s3HXhao0oCEJUPT9Cjt3du6ShLF6SSiPKG7RKtJ7sdG7Un2lHCeEu', NULL, 'kayzellegabalfin@gmail.com', 10, 1426034711, 1426034711, 'Gabalfin', 'Kayzelle', NULL, '', NULL, NULL, NULL, '', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, 'Client'),
-(4, 'Administrator', 'tzbozK4S2eX5bBix9AqGouaw53YwOmdd', '$2y$13$iTp0kXxoLXfUX.G0AcFvYO62fROSgxHhE4qLZYftSms/aUEC9eWYG', NULL, 'rbaconsultancy@gmail.com', 10, 1426951248, 1426951248, 'Consultancy', 'RBA', NULL, '', NULL, NULL, NULL, '', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, 'Client');
+(3, 'Kayzelle', 'VNVMl94SN5m-sJQtEZT1-Jp7yqm2s7JT', '$2y$13$s3HXhao0oCEJUPT9Cjt3du6ShLF6SSiPKG7RKtJ7sdG7Un2lHCeEu', NULL, 'kayzellegabalfin@gmail.com', 10, 1426034711, 1426034711, 'Gabalfin', 'Kayzelle', NULL, '', NULL, NULL, NULL, '', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, 'Client');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `auth_assignment`
+--
+ALTER TABLE `auth_assignment`
+ ADD PRIMARY KEY (`item_name`,`user_id`);
+
+--
+-- Indexes for table `auth_item`
+--
+ALTER TABLE `auth_item`
+ ADD PRIMARY KEY (`name`), ADD KEY `rule_name` (`rule_name`), ADD KEY `type` (`type`);
+
+--
+-- Indexes for table `auth_item_child`
+--
+ALTER TABLE `auth_item_child`
+ ADD PRIMARY KEY (`parent`,`child`), ADD KEY `child` (`child`);
+
+--
+-- Indexes for table `auth_rule`
+--
+ALTER TABLE `auth_rule`
+ ADD PRIMARY KEY (`name`);
 
 --
 -- Indexes for table `migration`
@@ -263,12 +389,12 @@ MODIFY `rlist_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=39;
 -- AUTO_INCREMENT for table `requirements_per_user`
 --
 ALTER TABLE `requirements_per_user`
-MODIFY `rpu_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `rpu_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=44;
 --
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-MODIFY `service_id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `service_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `service_list`
 --
@@ -282,6 +408,25 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `auth_assignment`
+--
+ALTER TABLE `auth_assignment`
+ADD CONSTRAINT `auth_assignment_ibfk_1` FOREIGN KEY (`item_name`) REFERENCES `auth_item` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `auth_item`
+--
+ALTER TABLE `auth_item`
+ADD CONSTRAINT `auth_item_ibfk_1` FOREIGN KEY (`rule_name`) REFERENCES `auth_rule` (`name`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
+-- Constraints for table `auth_item_child`
+--
+ALTER TABLE `auth_item_child`
+ADD CONSTRAINT `auth_item_child_ibfk_1` FOREIGN KEY (`parent`) REFERENCES `auth_item` (`name`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `auth_item_child_ibfk_2` FOREIGN KEY (`child`) REFERENCES `auth_item` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `price_list`
@@ -299,9 +444,7 @@ ADD CONSTRAINT `requirements_list_fk_1` FOREIGN KEY (`slist_id`) REFERENCES `ser
 -- Constraints for table `requirements_per_user`
 --
 ALTER TABLE `requirements_per_user`
-ADD CONSTRAINT `requirements_per_user_fk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-ADD CONSTRAINT `requirements_per_user_fk_2` FOREIGN KEY (`rlist_id`) REFERENCES `requirements_list` (`rlist_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-ADD CONSTRAINT `requirements_per_user_fk_3` FOREIGN KEY (`service_id`) REFERENCES `services` (`service_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ADD CONSTRAINT `requirements_per_user_fk_2` FOREIGN KEY (`rlist_id`) REFERENCES `requirements_list` (`rlist_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `services`

@@ -75,7 +75,20 @@
 									<span class="icon icon-close"></span>
 									<form onsubmit="return checkForm(this);">
 									<h2>General Instruction</h2>
-									<p>Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard tigernut juccama green bean celtuce collard greens avocado quandong <strong>fennel gumbo</strong> black-eyed pea. Grape silver beet watercress potato tigernut corn groundnut. Chickweed okra pea winter purslane coriander yarrow sweet pepper radish garlic brussels sprout groundnut summer purslane earthnut pea <strong>tomato spring onion</strong> azuki bean gourd.</p>
+									<p><strong>1. This Consolidated General Application Form (CGAF) is written in the English language. Enter
+										legibly all the information required into the appropriate spaces on the form. If information required
+										is not applicable with your application, please write “N/A” therein. Do not leave any item blank.
+										The Bureau will not act on application forms that are accomplished incorrectly. All entries must
+										be in CAPITAL LETTERS. Your answers must be in English and must use English characters
+										only. Letters like ñ, é, ü, and ç are not recognized by the system. For instance, please enter
+										names like “Muñoz” and “Sémonin” as “Munoz” and “Semonin”, respectively.</strong><br>
+										<strong>2. The CGAF must be accomplished in duplicate [two (2) copies].</strong><br>
+										<strong>3. All sworn statements or affidavit must be duly notarized.</strong><br>
+										<strong>4. Documents executed outside the Philippines must be authenticated by the Philippine
+										Embassy/Consular Officials of the Philippine foreign service at the place of issuance or nearest to
+										it, with English translation, if written in other foreign language.</strong><br>
+										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
+										otherwise your application or petition cannot be processed immediately.</strong><br></p>
 									<p><input onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');"  id="field_terms" type="checkbox" name="terms"><label for="field_terms">I accept the terms &amp; conditions.</label></input></p>
 									<p align= "right"><input type="submit" value="Continue"></p> </form>
 								</div>
@@ -98,7 +111,20 @@
 									<span class="icon icon-close"></span>
 									<form onsubmit="return checkForm(this);">
 									<h2>General Instruction</h2>
-									<p>Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard tigernut juccama green bean celtuce collard greens avocado quandong <strong>fennel gumbo</strong> black-eyed pea. Grape silver beet watercress potato tigernut corn groundnut. Chickweed okra pea winter purslane coriander yarrow sweet pepper radish garlic brussels sprout groundnut summer purslane earthnut pea <strong>tomato spring onion</strong> azuki bean gourd.</p>
+									<p><strong>1. This Consolidated General Application Form (CGAF) is written in the English language. Enter
+										legibly all the information required into the appropriate spaces on the form. If information required
+										is not applicable with your application, please write “N/A” therein. Do not leave any item blank.
+										The Bureau will not act on application forms that are accomplished incorrectly. All entries must
+										be in CAPITAL LETTERS. Your answers must be in English and must use English characters
+										only. Letters like ñ, é, ü, and ç are not recognized by the system. For instance, please enter
+										names like “Muñoz” and “Sémonin” as “Munoz” and “Semonin”, respectively.</strong><br>
+										<strong>2. The CGAF must be accomplished in duplicate [two (2) copies].</strong><br>
+										<strong>3. All sworn statements or affidavit must be duly notarized.</strong><br>
+										<strong>4. Documents executed outside the Philippines must be authenticated by the Philippine
+										Embassy/Consular Officials of the Philippine foreign service at the place of issuance or nearest to
+										it, with English translation, if written in other foreign language.</strong><br>
+										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
+										otherwise your application or petition cannot be processed immediately.</strong><br></p>
 									<p><input onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');"  id="field_terms1" type="checkbox" name="terms"><label for="field_terms1">I accept the terms &amp; conditions.</label></input></p>
 									<p align= "right"><input type="submit" value="Continue"></p> </form>
 								</div>
@@ -120,7 +146,20 @@
 									<span class="icon icon-close"></span>
 									<form onsubmit="return checkForm(this);">
 									<h2>General Instruction</h2>
-									<p>Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard tigernut juccama green bean celtuce collard greens avocado quandong <strong>fennel gumbo</strong> black-eyed pea. Grape silver beet watercress potato tigernut corn groundnut. Chickweed okra pea winter purslane coriander yarrow sweet pepper radish garlic brussels sprout groundnut summer purslane earthnut pea <strong>tomato spring onion</strong> azuki bean gourd.</p>
+									<p><strong>1. This Consolidated General Application Form (CGAF) is written in the English language. Enter
+										legibly all the information required into the appropriate spaces on the form. If information required
+										is not applicable with your application, please write “N/A” therein. Do not leave any item blank.
+										The Bureau will not act on application forms that are accomplished incorrectly. All entries must
+										be in CAPITAL LETTERS. Your answers must be in English and must use English characters
+										only. Letters like ñ, é, ü, and ç are not recognized by the system. For instance, please enter
+										names like “Muñoz” and “Sémonin” as “Munoz” and “Semonin”, respectively.</strong><br>
+										<strong>2. The CGAF must be accomplished in duplicate [two (2) copies].</strong><br>
+										<strong>3. All sworn statements or affidavit must be duly notarized.</strong><br>
+										<strong>4. Documents executed outside the Philippines must be authenticated by the Philippine
+										Embassy/Consular Officials of the Philippine foreign service at the place of issuance or nearest to
+										it, with English translation, if written in other foreign language.</strong><br>
+										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
+										otherwise your application or petition cannot be processed immediately.</strong><br></p>
 									<p><input onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');"  id="field_terms2" type="checkbox" name="terms2"><label for="field_terms">I accept the terms &amp; conditions.</label></input></p>
 									<p align= "right"><input type="submit" value="Continue"></p> </form>
 								</div>
@@ -143,7 +182,20 @@
 									<span class="icon icon-close"></span>
 									<form onsubmit="return checkForm(this);">
 									<h2>General Instruction</h2>
-									<p>Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard tigernut juccama green bean celtuce collard greens avocado quandong <strong>fennel gumbo</strong> black-eyed pea. Grape silver beet watercress potato tigernut corn groundnut. Chickweed okra pea winter purslane coriander yarrow sweet pepper radish garlic brussels sprout groundnut summer purslane earthnut pea <strong>tomato spring onion</strong> azuki bean gourd.</p>
+									<p><strong>1. This Consolidated General Application Form (CGAF) is written in the English language. Enter
+										legibly all the information required into the appropriate spaces on the form. If information required
+										is not applicable with your application, please write “N/A” therein. Do not leave any item blank.
+										The Bureau will not act on application forms that are accomplished incorrectly. All entries must
+										be in CAPITAL LETTERS. Your answers must be in English and must use English characters
+										only. Letters like ñ, é, ü, and ç are not recognized by the system. For instance, please enter
+										names like “Muñoz” and “Sémonin” as “Munoz” and “Semonin”, respectively.</strong><br>
+										<strong>2. The CGAF must be accomplished in duplicate [two (2) copies].</strong><br>
+										<strong>3. All sworn statements or affidavit must be duly notarized.</strong><br>
+										<strong>4. Documents executed outside the Philippines must be authenticated by the Philippine
+										Embassy/Consular Officials of the Philippine foreign service at the place of issuance or nearest to
+										it, with English translation, if written in other foreign language.</strong><br>
+										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
+										otherwise your application or petition cannot be processed immediately.</strong><br></p>
 									<p><input onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');"  id="field_terms3" type="checkbox" name="terms"><label for="field_terms3">I accept the terms &amp; conditions.</label></input></p>
 									<p align= "right"><input type="submit" value="Continue"></p> </form>
 								</div>
@@ -165,7 +217,20 @@
 									<span class="icon icon-close"></span>
 									<form onsubmit="return checkForm(this);">
 									<h2>General Instruction</h2>
-									<p>Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard tigernut juccama green bean celtuce collard greens avocado quandong <strong>fennel gumbo</strong> black-eyed pea. Grape silver beet watercress potato tigernut corn groundnut. Chickweed okra pea winter purslane coriander yarrow sweet pepper radish garlic brussels sprout groundnut summer purslane earthnut pea <strong>tomato spring onion</strong> azuki bean gourd.</p>
+									<p><strong>1. This Consolidated General Application Form (CGAF) is written in the English language. Enter
+										legibly all the information required into the appropriate spaces on the form. If information required
+										is not applicable with your application, please write “N/A” therein. Do not leave any item blank.
+										The Bureau will not act on application forms that are accomplished incorrectly. All entries must
+										be in CAPITAL LETTERS. Your answers must be in English and must use English characters
+										only. Letters like ñ, é, ü, and ç are not recognized by the system. For instance, please enter
+										names like “Muñoz” and “Sémonin” as “Munoz” and “Semonin”, respectively.</strong><br>
+										<strong>2. The CGAF must be accomplished in duplicate [two (2) copies].</strong><br>
+										<strong>3. All sworn statements or affidavit must be duly notarized.</strong><br>
+										<strong>4. Documents executed outside the Philippines must be authenticated by the Philippine
+										Embassy/Consular Officials of the Philippine foreign service at the place of issuance or nearest to
+										it, with English translation, if written in other foreign language.</strong><br>
+										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
+										otherwise your application or petition cannot be processed immediately.</strong><br></p>
 									<p><input onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');"  id="field_terms4" type="checkbox" name="terms"><label for="field_terms4">I accept the terms &amp; conditions.</label></input></p>
 									<p align= "right"><input type="submit" value="Continue"></p> </form>
 								</div>

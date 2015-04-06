@@ -73,7 +73,6 @@
 								<div>
 								<div class="content-style-text">
 									<span class="icon icon-close"></span>
-									<form onsubmit="return checkForm(this);">
 									<h2>General Instruction</h2>
 									<p><strong>1. This Consolidated General Application Form (CGAF) is written in the English language. Enter
 										legibly all the information required into the appropriate spaces on the form. If information required
@@ -89,8 +88,7 @@
 										it, with English translation, if written in other foreign language.</strong><br>
 										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
 										otherwise your application or petition cannot be processed immediately.</strong><br></p>
-									<p><input onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');"  id="field_terms" type="checkbox" name="terms"><label for="field_terms">I accept the terms &amp; conditions.</label></input></p>
-									<p align= "right"><input type="submit" value="Continue"></p> </form>
+									<p align= "right"><input type="submit" value="Continue"></p> 
 								</div>
 								</div>
 								</div>
@@ -109,7 +107,6 @@
 								<div>
 								<div class="content-style-text">
 									<span class="icon icon-close"></span>
-									<form onsubmit="return checkForm(this);">
 									<h2>General Instruction</h2>
 									<p><strong>1. This Consolidated General Application Form (CGAF) is written in the English language. Enter
 										legibly all the information required into the appropriate spaces on the form. If information required
@@ -125,8 +122,7 @@
 										it, with English translation, if written in other foreign language.</strong><br>
 										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
 										otherwise your application or petition cannot be processed immediately.</strong><br></p>
-									<p><input onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');"  id="field_terms1" type="checkbox" name="terms"><label for="field_terms1">I accept the terms &amp; conditions.</label></input></p>
-									<p align= "right"><input type="submit" value="Continue"></p> </form>
+									<p align= "right"><input type="submit" value="Continue"></p>
 								</div>
 								</div>
 								</div>
@@ -144,7 +140,6 @@
 								<div>
 								<div class="content-style-text">
 									<span class="icon icon-close"></span>
-									<form onsubmit="return checkForm(this);">
 									<h2>General Instruction</h2>
 									<p><strong>1. This Consolidated General Application Form (CGAF) is written in the English language. Enter
 										legibly all the information required into the appropriate spaces on the form. If information required
@@ -160,8 +155,7 @@
 										it, with English translation, if written in other foreign language.</strong><br>
 										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
 										otherwise your application or petition cannot be processed immediately.</strong><br></p>
-									<p><input onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');"  id="field_terms2" type="checkbox" name="terms2"><label for="field_terms">I accept the terms &amp; conditions.</label></input></p>
-									<p align= "right"><input type="submit" value="Continue"></p> </form>
+									<p align= "right"><input type="submit" value="Continue"></p> 
 								</div>
 								</div>
 								</div>
@@ -180,7 +174,6 @@
 								<div>
 								<div class="content-style-text">
 									<span class="icon icon-close"></span>
-									<form onsubmit="return checkForm(this);">
 									<h2>General Instruction</h2>
 									<p><strong>1. This Consolidated General Application Form (CGAF) is written in the English language. Enter
 										legibly all the information required into the appropriate spaces on the form. If information required
@@ -196,8 +189,7 @@
 										it, with English translation, if written in other foreign language.</strong><br>
 										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
 										otherwise your application or petition cannot be processed immediately.</strong><br></p>
-									<p><input onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');"  id="field_terms3" type="checkbox" name="terms"><label for="field_terms3">I accept the terms &amp; conditions.</label></input></p>
-									<p align= "right"><input type="submit" value="Continue"></p> </form>
+									<p align= "right"><input type="submit" value="Continue"></p> 
 								</div>
 								</div>
 								</div>
@@ -215,7 +207,6 @@
 								<div>
 								<div class="content-style-text">
 									<span class="icon icon-close"></span>
-									<form onsubmit="return checkForm(this);">
 									<h2>General Instruction</h2>
 									<p><strong>1. This Consolidated General Application Form (CGAF) is written in the English language. Enter
 										legibly all the information required into the appropriate spaces on the form. If information required
@@ -231,8 +222,7 @@
 										it, with English translation, if written in other foreign language.</strong><br>
 										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
 										otherwise your application or petition cannot be processed immediately.</strong><br></p>
-									<p><input onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');"  id="field_terms4" type="checkbox" name="terms"><label for="field_terms4">I accept the terms &amp; conditions.</label></input></p>
-									<p align= "right"><input type="submit" value="Continue"></p> </form>
+									<p align= "right"><input type="submit" value="Continue"></p> 
 								</div>
 								</div>
 								</div>
@@ -250,7 +240,6 @@
 								<div>
 								<div class="content-style-text">
 									<span class="icon icon-close"></span>
-									<form onsubmit="return checkForm(this);">
 									<h2>General Instruction</h2>
 									<p><strong>1. This Consolidated General Application Form (CGAF) is written in the English language. Enter
 										legibly all the information required into the appropriate spaces on the form. If information required
@@ -266,8 +255,7 @@
 										it, with English translation, if written in other foreign language.</strong><br>
 										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
 										otherwise your application or petition cannot be processed immediately.</strong><br></p>
-									<p><input onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');"  id="field_terms5" type="checkbox" name="terms"><label for="field_terms5">I accept the terms &amp; conditions.</label></input></p>
-									<p align= "right"><input type="submit" value="Continue"></p> </form>
+									<p align= "right"><input type="submit" value="Continue"></p> 
 								</div>
 								</div>
 								</div>
@@ -400,11 +388,4 @@
 			})();
 		</script>
 		
-		<script type="text/javascript">
-				document.getElementById("field_terms").setCustomValidity("Please indicate that you accept the Terms and Conditions");
-				document.getElementById("field_terms1").setCustomValidity("Please indicate that you accept the Terms and Conditions");
-				document.getElementById("field_terms2").setCustomValidity("Please indicate that you accept the Terms and Conditions");
-				document.getElementById("field_terms3").setCustomValidity("Please indicate that you accept the Terms and Conditions");
-				document.getElementById("field_terms4").setCustomValidity("Please indicate that you accept the Terms and Conditions");
-				document.getElementById("field_terms5").setCustomValidity("Please indicate that you accept the Terms and Conditions");
-		</script>
+		

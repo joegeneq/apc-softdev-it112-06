@@ -1,10 +1,20 @@
- <!DOCTYPE html>
-<html lang="en" class="no-js">
+<?php
+use yii\helpers\Html;
+use yii\bootstrap\ActiveForm;
+use yii\grid\GridView;
+
+/* @var $this yii\web\View */
+/* @var $form yii\bootstrap\ActiveForm */
+/* @var $model \common\models\Services1 */
+/* @var $searchModel backend\models\Services1Search */
+/* @var $dataProvider yii\data\ActiveDataProvider */
+?>
+
+
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
-		<title>Morphing Buttons Concept | Demo 2</title>
 		<meta name="description" content="Morphing Buttons Concept: Inspiration for revealing content by morphing the action element" />
 		<meta name="keywords" content="expanding button, morph, modal, fullscreen, transition, ui" />
 		<meta name="author" content="Codrops" />
@@ -122,7 +132,21 @@
 										it, with English translation, if written in other foreign language.</strong><br>
 										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
 										otherwise your application or petition cannot be processed immediately.</strong><br></p>
-									<p align= "right"><input type="submit" value="Continue"></p>
+									<div class="services1-form">
+
+										<?php $form = ActiveForm::begin(); ?>
+
+										<?= Html::activeHiddenInput($model, 'user_id') ?>
+
+										<?= Html::activeHiddenInput($model, 'slist_id') ?>
+										<div class="form-group">
+										<p align= "right">	<?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?> </p>
+										</div>
+
+										<?php ActiveForm::end(); ?>
+
+									</div>
+									
 								</div>
 								</div>
 								</div>

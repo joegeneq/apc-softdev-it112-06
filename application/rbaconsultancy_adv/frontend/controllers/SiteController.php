@@ -3,10 +3,12 @@ namespace frontend\controllers;
 
 use Yii;
 use common\models\LoginForm;
+use common\models\Services;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use backend\models\Services1Search;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
@@ -122,7 +124,19 @@ class SiteController extends Controller
 
    public function actionServices()
     {
-        return $this->render('services');
+       
+		
+		$model = new Services();               
+        $model->user_id = Yii::$app->user->identity->id; 
+        $model->slist_id = 7; 
+            
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+             return $this->redirect('../../frontend/web/index.php?r=site%2Fservices');
+        } else {
+            return $this->render('services', [
+                'model' => $model,
+            ]);
+        }
     }
 
     public function actionServices_1()

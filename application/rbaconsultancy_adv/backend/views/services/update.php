@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Services */
 
-$this->title = 'Update Services: ' . ' ' . $model->service_id;
-$this->params['breadcrumbs'][] = ['label' => 'Services', 'url' => ['index']];
+$this->title = 'Update Visa Application: ' . ' ' . $model->service_id;
+$this->params['breadcrumbs'][] = ['label' => 'Visa Applications', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->service_id, 'url' => ['view', 'id' => $model->service_id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>

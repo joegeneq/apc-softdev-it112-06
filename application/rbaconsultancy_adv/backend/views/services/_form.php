@@ -16,7 +16,7 @@ use common\models\ServiceList;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <!-- <?= $form->field($model, 'service_id')->textInput()->label('Transaction Code') ?> -->
+    <?= $form->field($model, 'service_id')->textInput(array('readonly' => true, 'placeholder' => 'Transaction Code is auto-generated.'))->label('Transaction Code')?>
 
     <?php 
         $user=UserMain::find()->all();
@@ -42,7 +42,7 @@ use common\models\ServiceList;
     DatePicker::className(), [
         // inline too, not bad
          'inline' => false, 
-		 'options' => ['placeholder' => 'Select Date of application ...'],
+		 'options' => ['placeholder' => 'Select Date of Application ...'],
          // modify template for custom rendering
         //'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
         'clientOptions' => [

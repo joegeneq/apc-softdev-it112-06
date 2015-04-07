@@ -32,8 +32,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'width'=>'250px',
              'value'=>function ($model, $key, $index, $widget) { 
                 return Html::a($model->user->username,  
-                    '#', 
-                    ['title'=>'View author detail', 'onclick'=>'alert("This will open the author page.\n\nDisabled for this demo!")']);
+                    './index.php?r=user%2Fview&id='.$model->user->id,
+                    ['title'=>'View Client detail']);
+                    );
             },
             'vAlign'=>'middle',
             'filterType'=>GridView::FILTER_SELECT2,
@@ -51,8 +52,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'width'=>'250px',
              'value'=>function ($model, $key, $index, $widget) { 
                 return Html::a($model->slist->slist_name,  
-                    '#', 
-                    ['title'=>'View author detail', 'onclick'=>'alert("This will open the author page.\n\nDisabled for this demo!")']);
+                    './index.php?r=servicelist%2Fview&id='.$model->slist->slist_id, 
+                    ['title'=>'View Service detail']);
             },
             'vAlign'=>'middle',
             'filterType'=>GridView::FILTER_SELECT2,

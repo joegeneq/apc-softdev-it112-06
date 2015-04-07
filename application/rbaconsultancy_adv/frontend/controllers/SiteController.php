@@ -128,7 +128,9 @@ class SiteController extends Controller
 		
 		$model = new Services();               
         $model->user_id = Yii::$app->user->identity->id; 
-        $model->slist_id = 7; 
+       // $model->slist_id = 7;
+		
+		
             
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
              return $this->redirect('../../frontend/web/index.php?r=site%2Fservices');

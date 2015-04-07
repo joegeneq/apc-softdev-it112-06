@@ -516,20 +516,7 @@ use yii\grid\GridView;
 										it, with English translation, if written in other foreign language.</strong><br>
 										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
 										otherwise your application or petition cannot be processed immediately.</strong><br></p>
-									<div class="services1-form">
-
-										<?php $form = ActiveForm::begin(); ?>
-
-										<?= Html::activeHiddenInput($model, 'user_id') ?>
-
-										<?= Html::activeHiddenInput($model, 'slist_id', array('value'=>7)); ?>
-										<div class="form-group">
-										<p align= "right">	<?= Html::submitButton($model->isNewRecord ? 'Apply' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?> </p>
-										</div>
-
-										<?php ActiveForm::end(); ?>
-
-									</div>
+									<p align= "right"><input type="submit" value="Continue"></p> 
 									
 								</div>
 								</div>
@@ -562,21 +549,7 @@ use yii\grid\GridView;
 										it, with English translation, if written in other foreign language.</strong><br>
 										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
 										otherwise your application or petition cannot be processed immediately.</strong><br></p>
-									<div class="services1-form">
-
-										<?php $form = ActiveForm::begin(); ?>
-
-										<?= Html::activeHiddenInput($model, 'user_id') ?>
-
-										<?= Html::activeHiddenInput($model, 'slist_id', array('value'=>7)); ?>
-										<div class="form-group">
-										<p align= "right">	<?= Html::submitButton($model->isNewRecord ? 'Apply' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?> </p>
-										</div>
-
-										<?php ActiveForm::end(); ?>
-
-									</div>
-									
+									<p align= "right"><input type="submit" value="Continue"></p> 
 								</div>
 								</div>
 								</div>
@@ -611,20 +584,7 @@ use yii\grid\GridView;
 										it, with English translation, if written in other foreign language.</strong><br>
 										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
 										otherwise your application or petition cannot be processed immediately.</strong><br></p>
-									<div class="services1-form">
-
-										<?php $form = ActiveForm::begin(); ?>
-
-										<?= Html::activeHiddenInput($model, 'user_id') ?>
-
-										<?= Html::activeHiddenInput($model, 'slist_id', array('value'=>8)); ?>
-										<div class="form-group">
-										<p align= "right">	<?= Html::submitButton($model->isNewRecord ? 'Apply' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?> </p>
-										</div>
-
-										<?php ActiveForm::end(); ?>
-
-									</div>
+									<p align= "right"><input type="submit" value="Continue"></p> 
 									
 								</div>
 								</div>
@@ -657,20 +617,7 @@ use yii\grid\GridView;
 										it, with English translation, if written in other foreign language.</strong><br>
 										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
 										otherwise your application or petition cannot be processed immediately.</strong><br></p>
-									<div class="services1-form">
-
-										<?php $form = ActiveForm::begin(); ?>
-
-										<?= Html::activeHiddenInput($model, 'user_id') ?>
-
-										<?= Html::activeHiddenInput($model, 'slist_id', array('value'=>8)); ?>
-										<div class="form-group">
-										<p align= "right">	<?= Html::submitButton($model->isNewRecord ? 'Apply' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?> </p>
-										</div>
-
-										<?php ActiveForm::end(); ?>
-
-									</div>
+									<p align= "right"><input type="submit" value="Continue"></p> 
 									
 								</div>
 								</div>
@@ -703,20 +650,7 @@ use yii\grid\GridView;
 										it, with English translation, if written in other foreign language.</strong><br>
 										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
 										otherwise your application or petition cannot be processed immediately.</strong><br></p>
-									<div class="services1-form">
-
-										<?php $form = ActiveForm::begin(); ?>
-
-										<?= Html::activeHiddenInput($model, 'user_id') ?>
-
-										<?= Html::activeHiddenInput($model, 'slist_id', array('value'=>8)); ?>
-										<div class="form-group">
-										<p align= "right">	<?= Html::submitButton($model->isNewRecord ? 'Apply' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?> </p>
-										</div>
-
-										<?php ActiveForm::end(); ?>
-
-									</div>
+									<p align= "right"><input type="submit" value="Continue"></p> 
 									
 								</div>
 								</div>

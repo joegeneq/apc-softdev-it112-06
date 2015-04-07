@@ -589,14 +589,140 @@ use yii\grid\GridView;
 					<section id="section-3">
 						<div class="mediabox">
 							<a href="#">Special Visa 1</a>
+							<div class="mockup-content">
+						<div class="morph-button morph-button-modal morph-button-modal-1 morph-button-fixed">
+							<button type="button">Apply here!</button>
+								<div class="morph-content">
+								<div>
+								<div class="content-style-text">
+									<span class="icon icon-close"></span>
+									<h2>General Instruction</h2>
+									<p><strong>1. This Consolidated General Application Form (CGAF) is written in the English language. Enter
+										legibly all the information required into the appropriate spaces on the form. If information required
+										is not applicable with your application, please write “N/A” therein. Do not leave any item blank.
+										The Bureau will not act on application forms that are accomplished incorrectly. All entries must
+										be in CAPITAL LETTERS. Your answers must be in English and must use English characters
+										only. Letters like ñ, é, ü, and ç are not recognized by the system. For instance, please enter
+										names like “Muñoz” and “Sémonin” as “Munoz” and “Semonin”, respectively.</strong><br>
+										<strong>2. The CGAF must be accomplished in duplicate [two (2) copies].</strong><br>
+										<strong>3. All sworn statements or affidavit must be duly notarized.</strong><br>
+										<strong>4. Documents executed outside the Philippines must be authenticated by the Philippine
+										Embassy/Consular Officials of the Philippine foreign service at the place of issuance or nearest to
+										it, with English translation, if written in other foreign language.</strong><br>
+										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
+										otherwise your application or petition cannot be processed immediately.</strong><br></p>
+									<div class="services1-form">
+
+										<?php $form = ActiveForm::begin(); ?>
+
+										<?= Html::activeHiddenInput($model, 'user_id') ?>
+
+										<?= Html::activeHiddenInput($model, 'slist_id', array('value'=>8)); ?>
+										<div class="form-group">
+										<p align= "right">	<?= Html::submitButton($model->isNewRecord ? 'Apply' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?> </p>
+										</div>
+
+										<?php ActiveForm::end(); ?>
+
+									</div>
+									
+								</div>
+								</div>
+								</div>
+						</div><!-- morph-button -->
+					</div><br><br>
 							<p>Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea.Sushi gumbo beet greens corn soko endive gumbo gourd.</p>
 						</div>
 						<div class="mediabox">
 							<a href="#">Special Visa 2</a>
+							<div class="mockup-content">
+						<div class="morph-button morph-button-modal morph-button-modal-1 morph-button-fixed">
+							<button type="button">Apply here!</button>
+								<div class="morph-content">
+								<div>
+								<div class="content-style-text">
+									<span class="icon icon-close"></span>
+									<h2>General Instruction</h2>
+									<p><strong>1. This Consolidated General Application Form (CGAF) is written in the English language. Enter
+										legibly all the information required into the appropriate spaces on the form. If information required
+										is not applicable with your application, please write “N/A” therein. Do not leave any item blank.
+										The Bureau will not act on application forms that are accomplished incorrectly. All entries must
+										be in CAPITAL LETTERS. Your answers must be in English and must use English characters
+										only. Letters like ñ, é, ü, and ç are not recognized by the system. For instance, please enter
+										names like “Muñoz” and “Sémonin” as “Munoz” and “Semonin”, respectively.</strong><br>
+										<strong>2. The CGAF must be accomplished in duplicate [two (2) copies].</strong><br>
+										<strong>3. All sworn statements or affidavit must be duly notarized.</strong><br>
+										<strong>4. Documents executed outside the Philippines must be authenticated by the Philippine
+										Embassy/Consular Officials of the Philippine foreign service at the place of issuance or nearest to
+										it, with English translation, if written in other foreign language.</strong><br>
+										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
+										otherwise your application or petition cannot be processed immediately.</strong><br></p>
+									<div class="services1-form">
+
+										<?php $form = ActiveForm::begin(); ?>
+
+										<?= Html::activeHiddenInput($model, 'user_id') ?>
+
+										<?= Html::activeHiddenInput($model, 'slist_id', array('value'=>8)); ?>
+										<div class="form-group">
+										<p align= "right">	<?= Html::submitButton($model->isNewRecord ? 'Apply' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?> </p>
+										</div>
+
+										<?php ActiveForm::end(); ?>
+
+									</div>
+									
+								</div>
+								</div>
+								</div>
+						</div><!-- morph-button -->
+					</div><br><br>
 							<p>Sushi gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.</p>
 						</div>
 						<div class="mediabox">
 							<a href="#">Special Visa 3</a>
+							<div class="mockup-content">
+						<div class="morph-button morph-button-modal morph-button-modal-1 morph-button-fixed">
+							<button type="button">Apply here!</button>
+								<div class="morph-content">
+								<div>
+								<div class="content-style-text">
+									<span class="icon icon-close"></span>
+									<h2>General Instruction</h2>
+									<p><strong>1. This Consolidated General Application Form (CGAF) is written in the English language. Enter
+										legibly all the information required into the appropriate spaces on the form. If information required
+										is not applicable with your application, please write “N/A” therein. Do not leave any item blank.
+										The Bureau will not act on application forms that are accomplished incorrectly. All entries must
+										be in CAPITAL LETTERS. Your answers must be in English and must use English characters
+										only. Letters like ñ, é, ü, and ç are not recognized by the system. For instance, please enter
+										names like “Muñoz” and “Sémonin” as “Munoz” and “Semonin”, respectively.</strong><br>
+										<strong>2. The CGAF must be accomplished in duplicate [two (2) copies].</strong><br>
+										<strong>3. All sworn statements or affidavit must be duly notarized.</strong><br>
+										<strong>4. Documents executed outside the Philippines must be authenticated by the Philippine
+										Embassy/Consular Officials of the Philippine foreign service at the place of issuance or nearest to
+										it, with English translation, if written in other foreign language.</strong><br>
+										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
+										otherwise your application or petition cannot be processed immediately.</strong><br></p>
+									<div class="services1-form">
+
+										<?php $form = ActiveForm::begin(); ?>
+
+										<?= Html::activeHiddenInput($model, 'user_id') ?>
+
+										<?= Html::activeHiddenInput($model, 'slist_id', array('value'=>8)); ?>
+										<div class="form-group">
+										<p align= "right">	<?= Html::submitButton($model->isNewRecord ? 'Apply' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?> </p>
+										</div>
+
+										<?php ActiveForm::end(); ?>
+
+									</div>
+									
+								</div>
+								</div>
+								</div>
+						</div><!-- morph-button -->
+					</div><br><br>
 							<p>Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard tigernut wasabi tofu broccoli mixture soup.</p>
 						</div>
 					</section>

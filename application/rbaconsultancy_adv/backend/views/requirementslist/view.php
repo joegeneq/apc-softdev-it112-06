@@ -28,11 +28,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'rlist_id',
-            'rlist_name',
-            'rlist_desc:ntext',
-            'rlist_dateadded',
-            'slist.slist_name',
+            ['attribute' => 'rlist_id', 'label' => 'Requirement Number'],
+            ['attribute' => 'rlist_name', 'label' => 'Requirement'],
+            ['attribute' => 'slist.slist_name', 'label' => 'Service'],
+            ['attribute' => 'rlist_desc', 'label' => 'Description'],
+            ['attribute' => 'rlist_dateadded', 'label' => 'Date Added'],
         ],
     ]) ?>
 

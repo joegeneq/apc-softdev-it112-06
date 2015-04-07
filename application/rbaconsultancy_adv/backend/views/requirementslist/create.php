@@ -7,7 +7,7 @@ use yii\helpers\Html;
 /* @var $model common\models\RequirementsList */
 
 $this->title = 'Create Requirements List';
-$this->params['breadcrumbs'][] = ['label' => 'Requirements Lists', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Requirements List', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="requirements-list-create">

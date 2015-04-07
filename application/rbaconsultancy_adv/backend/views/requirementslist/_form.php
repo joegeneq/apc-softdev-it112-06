@@ -14,9 +14,11 @@ use common\models\ServiceList;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'rlist_name')->textInput(['maxlength' => 255])->label('Requirement Name') ?>
+     <?= $form->field($model, 'rlist_id')->textInput(array('readonly' => true, 'placeholder' => 'Requirement ID is auto-generated.'))->label('Requirement ID')?>
 
-    <?= $form->field($model, 'rlist_desc')->textarea(['rows' => 6])->label('Requirement Description') ?>
+    <?= $form->field($model, 'rlist_name')->textInput(['maxlength' => 255])->label('Requirement') ?>
+
+    <?= $form->field($model, 'rlist_desc')->textarea(['rows' => 6])->label('Description') ?>
 
     <!--  <?= $form->field($model, 'rlist_dateadded')->textInput()->label('Date Added') ?> -->
 
@@ -27,7 +29,7 @@ use common\models\ServiceList;
 	
 	        echo $form->field($model, 'slist_id')->dropDownList(
 	                                $listData,
-	                                ['prompt'=>'Select Service...'])->label('Service Name') ;
+	                                ['prompt'=>'Select Service...'])->label('Service') ;
     ?>
 
     <div class="form-group">

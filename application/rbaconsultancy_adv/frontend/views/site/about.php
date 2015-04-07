@@ -44,11 +44,9 @@
 					<h3>RBA General Consultancy and Services</h3>
 					<div class="about-left-info">
 						<img src="images/about1.jpg" alt="" />
-						<h4>But I must explain to you how all this mistaken idea perspiciatis unde omnis iste </h4>
-						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
-						<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+						<h4>Company Overview </h4>
+						<p> RBA Consultancy and General Services is a duly recognized business entity by the Department of Trade and Industry, Department of Labor and Employment and Bureau of Immigration. It was established in 2001 through the leadership and management of Mr. Ricardo B. Alegre. His expertise and efficient processing of working permits and immigration visas gained the respect of big companies as his clients.</p><br>
+						<p>RBA Consultancy and General Services is committed to bringing 100% satisfaction to its clients, that’s why they strive hard to give the clients all the services that they need in the most efficient and economical way with such excellence</p>
 					</div>
 				</div>
 				
@@ -60,8 +58,11 @@
 						</div>
 					
 						<div class="about-right-info">
-							<h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+							<h4>Apply for your Visa now with ease</h4>
+							<p>With RBA Client Servicing System, you do not need to know any technical terms to get your Visa. 
+					   Our system includes everything you need: laying out the process in a sequence of steps, completing 
+					   every form and letter you need, explanation on how to submit the application, and guides to all the 
+					   follow on processes</p>
 						</div>
 						<div class="clear"> </div>
 					</div>
@@ -72,8 +73,10 @@
 						</div>
 						
 						<div class="about-right-info">
-							<h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+							<h4>Manage your account and monitor every transactions you made</h4>
+							<p>With our Client Servicing System, you’re also in control. You can work on your application whenever 
+						and wherever is convenient for you, and if you need help, we have got it for you.
+						We make the process quick and gives you peace of mind. </p>
 						</div>	
 						<div class="clear"> </div>
 					</div>
@@ -84,8 +87,9 @@
 						</div>
 					
 						<div class="about-right-info">
-							<h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+							<h4>Know the status of your transactions fast and seamlessly</h4>
+							<p>We secure every piece of data you provide us, every answer, individually 
+								with its own unique government level security key.</p>
 						</div>
 						<div class="clear"> </div>
 					</div>
@@ -99,8 +103,8 @@
 							<a href="images/t1.jpg" class="flipLightBox">
 							<img src="images/t1.jpg"  alt="Image 2" />
 							</a>
-							<h3>Consectetur adipisicing</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+							<h3>Ricardo Alegre</h3>
+							<p>Mr. Ricardo Alegre is the owner and founder of RBA Consultancy and General Services. He started this business in the year of 2000. He is the acting president of the said company. </p>
 							<div class="sub-about-grid-social">
 								<ul>
 									<li><a href="#"><img src="images/facebook.png" title="facebook"></a></li>

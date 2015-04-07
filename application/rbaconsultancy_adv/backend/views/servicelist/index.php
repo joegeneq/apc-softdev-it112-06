@@ -24,10 +24,10 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
 
             //'slist_id',
-            ['attribute' => 'slist_name', 'label' => 'Service Name'],
-            ['attribute' => 'slist_desc', 'label' => 'Service Description'],
-            ['attribute' => 'slist_type', 'label' => 'Service Type'],
-            ['attribute' => 'slist_dateadded', 'label' => 'Service Date Added'], 
+            ['attribute' => 'slist_name', 'label' => 'Service'],
+            ['attribute' => 'slist_desc', 'label' => 'Description'],
+            ['attribute' => 'slist_type', 'label' => 'Type'],
+            ['attribute' => 'slist_dateadded', 'label' => 'Date Added'], 
 
 
         ['class' => 'kartik\grid\ActionColumn'],

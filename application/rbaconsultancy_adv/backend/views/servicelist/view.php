@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model backend\models\Servicelist */
 
 $this->title = $model->slist_name;
-$this->params['breadcrumbs'][] = ['label' => 'Service list', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Service List', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="servicelist-view">
@@ -29,10 +29,10 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'slist_id',
-			['attribute' => 'slist_name', 'label' => 'Service Name'],
-			['attribute' => 'slist_desc', 'label' => 'Service Description'],
-			['attribute' => 'slist_type', 'label' => 'Service Type'],
-            ['attribute' => 'slist_dateadded', 'label' => 'Service Date Added'], 
+			['attribute' => 'slist_name', 'label' => 'Service'],
+			['attribute' => 'slist_desc', 'label' => 'Description'],
+			['attribute' => 'slist_type', 'label' => 'Type'],
+            ['attribute' => 'slist_dateadded', 'label' => 'Date Added'], 
         ],
     ]) ?>
 

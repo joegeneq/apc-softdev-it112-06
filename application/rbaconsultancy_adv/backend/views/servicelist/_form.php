@@ -14,9 +14,9 @@ use yii\helpers\ArrayHelper;
 
     <?= $form->field($model, 'slist_id')->textInput(array('readonly' => true, 'placeholder' => 'Service ID is auto-generated.')) ?>
 
-    <?= $form->field($model, 'slist_name')->textInput(['maxlength' => 255])->label('Service Name') ?>
+    <?= $form->field($model, 'slist_name')->textInput(['maxlength' => 255])->label('Service') ?>
 
-    <?= $form->field($model, 'slist_desc')->textarea(['rows' => 6])->label('Service Description') ?>
+    <?= $form->field($model, 'slist_desc')->textarea(['rows' => 6])->label('Description') ?>
 
     
 	<?php echo $form->field($model, 'slist_type')->dropDownList(['Immigrant Visa' => 'Immigrant Visa', 'Non Immigrant Visa' => 'Non Immigrant Visa', 'Special Visa' => 'Special Visa'], ['prompt'=>'Select Visa Type...']); ?>

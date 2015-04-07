@@ -62,12 +62,11 @@ use yii\captcha\Captcha;
       				</div>
       			<div class="company_address">
 				     	<h3>Company Information :</h3>
-						    	<p>500 Lorem Ipsum Dolor Sit,</p>
-						   		<p>22-56-2-9 Sit Amet, Lorem,</p>
-						   		<p>USA</p>
-				   		<p>Phone:(00) 222 666 444</p>
-				   		<p>Fax: (000) 000 00 00 0</p>
-				 	 	<p>Email: <span>info@mycompany.com</span></p>
+						    	<p>41 Santan Street, Maricaban,</p>
+						   		<p>Barangay 184, Pasay City, Metro Manila</p>
+						   		<p>Philippines</p>
+				   		<p>Phone:(046) 418-6918</p>
+				   		<p>Email: <span>rba.consultancy@yahoo.com</span></p>
 				   		<p>Follow on: <span>Facebook</span>, <span>Twitter</span></p>
 				   </div>
 				</div>		

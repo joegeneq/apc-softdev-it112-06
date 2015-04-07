@@ -45,7 +45,7 @@ use yii\helpers\Html;
 			<h2>Welcome to our site!</h2>
 			<p>RBA Consultancy and General Services processes different kinds of travel Visa of expatriate here in the Philippines.</p>
 			<p>We are dedicated to give our clients like you fast but economical way to process your Visa and other legal documents.</p>
-			<a href="#">Join us!</a>
+			<a href="./index.php?r=site%2Fsignup">Join us!</a>
 		</div>
 	</div>
 
@@ -78,7 +78,7 @@ use yii\helpers\Html;
 			<div class="col span_2_of_3">
 				<div class="company_address">
 					<h3>Manage your account and monitor every transactions you made</h3>
-					<p>With our Client Servicing System, you’re also in control. Yyou can work on your application whenever 
+					<p>With our Client Servicing System, you’re also in control. You can work on your application whenever 
 						and wherever is convenient for you, and if you need help, we’ve got it for you.
 						We make the process quick and gives you peace of mind.</p>
 				</div>

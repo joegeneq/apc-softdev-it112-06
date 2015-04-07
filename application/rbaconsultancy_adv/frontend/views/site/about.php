@@ -47,6 +47,9 @@
 						<h4>Company Overview </h4>
 						<p> RBA Consultancy and General Services is a duly recognized business entity by the Department of Trade and Industry, Department of Labor and Employment and Bureau of Immigration. It was established in 2001 through the leadership and management of Mr. Ricardo B. Alegre. His expertise and efficient processing of working permits and immigration visas gained the respect of big companies as his clients.</p><br>
 						<p>RBA Consultancy and General Services is committed to bringing 100% satisfaction to its clients, that’s why they strive hard to give the clients all the services that they need in the most efficient and economical way with such excellence</p>
+						<p>RBA Consultancy and General Services processes different kinds of travel Visa of expatriate here in the Philippines.
+							They are dedicated to give our clients like you fast but economical way to process your Visa and other legal documents.</p>
+					
 					</div>
 				</div>
 				

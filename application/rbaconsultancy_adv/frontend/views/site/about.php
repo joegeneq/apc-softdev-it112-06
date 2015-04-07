@@ -41,7 +41,7 @@
 
 			<div class="about-grids">
 				<div class="about-left">
-					<h3>RBA General Consultancy and Services</h3>
+					<h3>RBA Consultancy and General Services</h3>
 					<div class="about-left-info">
 						<img src="images/about1.jpg" alt="" />
 						<h4>Company Overview </h4>

@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
            ['label' => 'Price Name', 'attribute' => 'plist_name'],
 		   ['label' => 'Cost of Service', 'attribute' => 'plist_price'],
 		   ['label' => 'Date Added', 'attribute' => 'plist_dateadded'],
-		   ['label' => 'Service Name', 'attribute' => 'slist_id'],
+		   ['label' => 'Service', 'attribute' => 'slist_id'],
             
         ],
     ]) ?>

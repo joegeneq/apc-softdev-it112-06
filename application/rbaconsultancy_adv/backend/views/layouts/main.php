@@ -43,7 +43,7 @@ AppAsset::register($this);
                     ['label' => Icon::show('home') . 'Home', 'url' => ['/site/index']],
                     ['label' => Icon::show('tower') . 'Administration', 'items' => [
                         ['label' => Icon::show('user') . 'Users', 'url' => ['/user/index']],
-                        ['label' => Icon::show('plane') . 'Visa Transactions', 'url' => ['/services/index']],
+                        ['label' => Icon::show('plane') . 'Visa Applications', 'url' => ['/services/index']],
                         ['label' => Icon::show('list') . 'Services List', 'url' => ['/servicelist/index']],
                         ['label' => Icon::show('list-alt') . 'Requirements List', 'url' => ['/requirementslist/index']],
                         ['label' => Icon::show('folder-open') . 'Requirements Per User', 'url' => ['/requirementsperuser/index']],

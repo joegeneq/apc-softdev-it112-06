@@ -4,6 +4,8 @@ use yii\helpers\Html;
 use kartik\grid\GridView;
 use yii\helpers\ArrayHelper;
 use common\models\RequirementsList;
+use common\models\UserMain;
+use common\models\ServiceList;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\RequirementsPerUserSearch */
@@ -26,16 +28,54 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
             //'rpu_id',
-            'service_id',
-            'user_id',
+       
+        [
+            'attribute'=>'service_id', 
+            'width'=>'250px',
+             'value'=>function ($model, $key, $index, $widget) { 
+                return Html::a($model->slist->slist_name,  
+                    './index.php?r=servicelist%2Fview&id='.$model->slist->slist_id, 
+                    ['title'=>'View Service detail']);
+            },
+            'vAlign'=>'middle',
+            'filterType'=>GridView::FILTER_SELECT2,
+            'filter'=>ArrayHelper::map(ServiceList::find()->orderBy('slist_name')->asArray()->all(), 'slist_id', 'slist_name'), 
+            'filterWidgetOptions'=>[
+                'pluginOptions'=>['allowClear'=>true],
+                ],
+            'filterInputOptions'=>['placeholder'=>'Select Service'],
+            'format'=>'raw',
+            'label' => 'Service Acquired',
+        ],
+
+        [
+            'attribute'=>'user_id', 
+            'width'=>'250px',
+             'value'=>function ($model, $key, $index, $widget) { 
+                return Html::a($model->user->username,  
+                    './index.php?r=user%2Fview&id='.$model->user->id,
+                    ['title'=>'View Client detail']
+                    );
+            },
+            'vAlign'=>'middle',
+            'filterType'=>GridView::FILTER_SELECT2,
+            'filter'=>ArrayHelper::map(UserMain::find()->orderBy('username')->asArray()->all(), 'id', 'username'), 
+            'filterWidgetOptions'=>[
+                'pluginOptions'=>['allowClear'=>true],
+                ],
+            'filterInputOptions'=>['placeholder'=>'Select Client'],
+            'format'=>'raw',
+            'label' => 'Acquired by',
+        ],
 
         [
             'attribute'=>'rlist_id', 
             'width'=>'250px',
              'value'=>function ($model, $key, $index, $widget) { 
-                return Html::a($model->rlist->rlist_name,  
-                    '#', 
-                    ['title'=>'View author detail', 'onclick'=>'alert("This will open the author page.\n\nDisabled for this demo!")']);
+                return Html::a($model->rlist->rlist_name,
+                    './index.php?r=requirementslist%2Fview&id='.$model->rlist->rlist_id,
+                        ['title'=>'View Requirement detail']
+                        );  
             },
             'vAlign'=>'middle',
             'filterType'=>GridView::FILTER_SELECT2,
@@ -45,11 +85,12 @@ $this->params['breadcrumbs'][] = $this->title;
                 ],
             'filterInputOptions'=>['placeholder'=>'Select Requirements'],
             'format'=>'raw',
+            'label' => 'Requirements No.',
         ],
 
-            'rpu_datefilesubmitted', //date
-            'rpu_fileuploaded', //uploaded files, if applicable
-            'rpu_status',
+            ['attribute' => 'rpu_datefilesubmitted', 'label' => 'Date Submitted',], //date
+            ['attribute' => 'rpu_fileuploaded', 'label' => 'File Uploaded',], //uploaded files, if applicable
+            ['attribute' => 'rpu_status', 'label' => 'Status',],
 
 
         ['class' => 'kartik\grid\ActionColumn'],

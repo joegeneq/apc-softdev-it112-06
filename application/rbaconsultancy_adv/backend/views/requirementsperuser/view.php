@@ -28,13 +28,13 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'rpu_id',
-            'rpu_status',
-            'rpu_datefilesubmitted',
-            'rpu_fileuploaded',
-            'rlist_id',
-            'user_id',
-            'service_id',
+            ['attribute' => 'rpu_id', 'label' => 'Requirement Number'],
+            ['attribute' => 'slist.slist_name', 'label' => 'Service Acquired'],
+            ['attribute' => 'user.username', 'label' => 'Acquired By'],
+            ['attribute' => 'rlist.rlist_name', 'label' => 'Requirement'],
+            ['attribute' => 'rpu_datefilesubmitted', 'label' => 'Date Submitted'],
+            ['attribute' => 'rpu_fileuploaded', 'label' => 'File Uploaded'],
+            ['attribute' => 'rpu_status', 'label' => 'Status'],
         ],
     ]) ?>
 

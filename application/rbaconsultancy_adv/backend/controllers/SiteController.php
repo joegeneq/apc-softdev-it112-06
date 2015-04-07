@@ -7,6 +7,9 @@ use yii\web\Controller;
 use common\models\LoginForm;
 use yii\filters\VerbFilter;
 use yii\web\ForbiddenHttpException;
+use common\models\Servicelist;
+use common\models\UserMain;
+use common\models\Services;
 
 /**
  * Site controller
@@ -56,8 +59,25 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
+
+        $servicesCount = ServiceList::find()->count();
+        
+        $userCount = UserMain::find()->count();
+
+        $applicationCount = Services::find()->count();
+        $penAppCount = Services::find()->where('service_status = \'Pending\'')->count();
+        $ongoingAppCount = Services::find()->where('service_status = \'Ongoing\'')->count();
+        $comAppCount = Services::find()->where('service_status = \'Completed\'')->count();
+
         if (Yii::$app->user->can('access-backend')) {
-            return $this->render('index');
+            return $this->render('index',[
+                    'servicesCount' => $servicesCount,
+                    'userCount' => $userCount,
+                    'applicationCount' => $applicationCount,
+                    'penAppCount' => $penAppCount,
+                    'ongoingAppCount' => $ongoingAppCount,
+                    'comAppCount' => $comAppCount
+                ]);
         } else {
             throw new ForbiddenHttpException("Sorry. You are not allow to access this page. For admin only.");
         }

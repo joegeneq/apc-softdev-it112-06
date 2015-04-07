@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
              'value'=>function ($model, $key, $index, $widget) { 
                 return Html::a($model->user->username,  
                     './index.php?r=user%2Fview&id='.$model->user->id,
-                    ['title'=>'View Client detail']);
+                    ['title'=>'View Client detail']
                     );
             },
             'vAlign'=>'middle',

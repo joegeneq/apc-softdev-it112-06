@@ -60,10 +60,11 @@ use yii\helpers\Html;
 			<div class="col span_2_of_3">
 				<div class="company_address">
 				    <h3>Apply for your Visa now with ease</h3>
-					<p>Bacon ipsum dolor sit amet tenderloin salami pig, fatback pastrami ham hock shoulder bacon t-bone pork meatball. 
-						Pancetta ham turkey shankle turducken jerky. Jowl spare ribs short ribs andouille tongue shoulder. Rump shoulder 
-						cow turducken, salami filet mignon ham sausage pancetta pork prosciutto brisket short ribs boudin. Shoulder short 
-						ribs andouille swine venison ham hock.</p>
+					<p>With RBA Client Servicing System, you don’t need to know any technical terms to get your Visa. 
+					   Our system includes everything you need: laying out the process in a sequence of steps, completing 
+					   every form and letter you need, explanation on how to submit the application, and guides to all the 
+					   follow on processes
+					</p>
 				</div>
   			</div>	
 			<div class="clear"> </div>
@@ -77,10 +78,9 @@ use yii\helpers\Html;
 			<div class="col span_2_of_3">
 				<div class="company_address">
 					<h3>Manage your account and monitor every transactions you made</h3>
-					<p>Candy bonbon pastry jujubes lollipop wafer biscuit biscuit. Topping brownie sesame snaps sweet roll pie. Croissant 
-						danish biscuit soufflé caramels jujubes jelly. Dragée danish caramels lemon drops dragée. Gummi bears cupcake 
-						biscuit tiramisu sugar plum pastry. Dragée gummies applicake pudding liquorice. Donut jujubes oat cake jelly-o. 
-						Dessert bear claw chocolate cake gummies lollipop sugar plum ice cream gummies cheesecake.</p>
+					<p>With our Client Servicing System, you’re also in control. Yyou can work on your application whenever 
+						and wherever is convenient for you, and if you need help, we’ve got it for you.
+						We make the process quick and gives you peace of mind.</p>
 				</div>
 			</div>	
 			
@@ -102,10 +102,8 @@ use yii\helpers\Html;
 			<div class="col span_2_of_3">
 				<div class="company_address">
 				    <h3>Know the status of your transactions fast and seamlessly</h3>
-					<p>In omni memoria patriae religionis sunt diri undead historiarum. Golums, zombies et fascinati. Maleficia! Vel a 
-						modern perhsaps morbi. A terrenti contagium. Forsitan illud Apocalypsi, vel malum poenae horrifying fecimus. 
-						Indeflexus monstra per plateas currere. Fit de nostra carne undead. Poenitentiam agite pœnitentiam! Vivens 
-						mortua sunt apud nos.</p>
+					<p>We secure every piece of data you provide us – every answer – individually 
+					   with its own unique government level security key.</p>
 				</div>
   			</div>
 			<div class="clear"> </div>

@@ -27,7 +27,8 @@
         "kartik-v/yii2-widgets": "@dev",
         "yiisoft/yii2-jui": "@dev",
         "fortawesome/font-awesome": "@dev",
-        "kartik-v/yii2-icons": "@dev"
+        "kartik-v/yii2-icons": "@dev",
+        "kartik-v/yii2-detail-view": "@dev"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

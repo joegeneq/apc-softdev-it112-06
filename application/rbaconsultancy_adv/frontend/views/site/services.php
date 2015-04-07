@@ -169,8 +169,8 @@ use yii\grid\GridView;
 						</div></div>
 						
 						<div class="mediabox"><div id="center">
-							<a href="#">Immigrant Visa 3</a>
-							<div class="mockup-content">
+							<a href="#">Immigrant Visa 3</a> 
+							<div class="mockup-content"><br>
 						<div class="morph-button morph-button-modal morph-button-modal-1 morph-button-fixed">
 							<button type="button">Apply here!</button>
 								<div class="morph-content">
@@ -306,28 +306,282 @@ use yii\grid\GridView;
 					<section id="section-2">
 						<div class="mediabox"><div id="left">
 							<a href="#">Extension of Pre-arranged Employee-Commercial (Commercial)</a>
+							<div class="mockup-content">
+						<div class="morph-button morph-button-modal morph-button-modal-1 morph-button-fixed">
+							<button type="button">Apply here!</button>
+								<div class="morph-content">
+								<div>
+								<div class="content-style-text">
+									<span class="icon icon-close"></span>
+									<h2>General Instruction</h2>
+									<p><strong>1. This Consolidated General Application Form (CGAF) is written in the English language. Enter
+										legibly all the information required into the appropriate spaces on the form. If information required
+										is not applicable with your application, please write “N/A” therein. Do not leave any item blank.
+										The Bureau will not act on application forms that are accomplished incorrectly. All entries must
+										be in CAPITAL LETTERS. Your answers must be in English and must use English characters
+										only. Letters like ñ, é, ü, and ç are not recognized by the system. For instance, please enter
+										names like “Muñoz” and “Sémonin” as “Munoz” and “Semonin”, respectively.</strong><br>
+										<strong>2. The CGAF must be accomplished in duplicate [two (2) copies].</strong><br>
+										<strong>3. All sworn statements or affidavit must be duly notarized.</strong><br>
+										<strong>4. Documents executed outside the Philippines must be authenticated by the Philippine
+										Embassy/Consular Officials of the Philippine foreign service at the place of issuance or nearest to
+										it, with English translation, if written in other foreign language.</strong><br>
+										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
+										otherwise your application or petition cannot be processed immediately.</strong><br></p>
+									<div class="services1-form">
+
+										<?php $form = ActiveForm::begin(); ?>
+
+										<?= Html::activeHiddenInput($model, 'user_id') ?>
+
+										<?= Html::activeHiddenInput($model, 'slist_id', array('value'=>5)); ?>
+										<div class="form-group">
+										<p align= "right">	<?= Html::submitButton($model->isNewRecord ? 'Apply' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?> </p>
+										</div>
+
+										<?php ActiveForm::end(); ?>
+
+									</div>
+									
+								</div>
+								</div>
+								</div>
+						</div><!-- morph-button -->
+					</div><br><br>
 							<p>For foreign nationals who are existing holders of a Pre-arranged Employee – Commercial Visa and wishes to continue to his employment in the Philippines</p>
 						</div></div>
+						
 						<div class="mediabox">
-							<a href="#">Temporary Visa</a><div id="right">
+							<a href="#">Temporary Visa</a><div id="right"><br><br>
+							<div class="mockup-content">
+						<div class="morph-button morph-button-modal morph-button-modal-1 morph-button-fixed">
+							<button type="button">Apply here!</button>
+								<div class="morph-content">
+								<div>
+								<div class="content-style-text">
+									<span class="icon icon-close"></span>
+									<h2>General Instruction</h2>
+									<p><strong>1. This Consolidated General Application Form (CGAF) is written in the English language. Enter
+										legibly all the information required into the appropriate spaces on the form. If information required
+										is not applicable with your application, please write “N/A” therein. Do not leave any item blank.
+										The Bureau will not act on application forms that are accomplished incorrectly. All entries must
+										be in CAPITAL LETTERS. Your answers must be in English and must use English characters
+										only. Letters like ñ, é, ü, and ç are not recognized by the system. For instance, please enter
+										names like “Muñoz” and “Sémonin” as “Munoz” and “Semonin”, respectively.</strong><br>
+										<strong>2. The CGAF must be accomplished in duplicate [two (2) copies].</strong><br>
+										<strong>3. All sworn statements or affidavit must be duly notarized.</strong><br>
+										<strong>4. Documents executed outside the Philippines must be authenticated by the Philippine
+										Embassy/Consular Officials of the Philippine foreign service at the place of issuance or nearest to
+										it, with English translation, if written in other foreign language.</strong><br>
+										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
+										otherwise your application or petition cannot be processed immediately.</strong><br></p>
+									<div class="services1-form">
+
+										<?php $form = ActiveForm::begin(); ?>
+
+										<?= Html::activeHiddenInput($model, 'user_id') ?>
+
+										<?= Html::activeHiddenInput($model, 'slist_id', array('value'=>3)); ?>
+										<div class="form-group">
+										<p align= "right">	<?= Html::submitButton($model->isNewRecord ? 'Apply' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?> </p>
+										</div>
+
+										<?php ActiveForm::end(); ?>
+
+									</div>
+									
+								</div>
+								</div>
+								</div>
+						</div><!-- morph-button -->
+					</div><br><br>
 							<p>A foreign national whose country does not have an existing reciprocity agreement with the Philippines</p>
 						</div></div>
+						
 						<div class="mediabox"><div id="center">
 							<a href="#">Conversion to Pre-arranged Employee-Commercial</a>
+							<div class="mockup-content">
+						<div class="morph-button morph-button-modal morph-button-modal-1 morph-button-fixed">
+							<button type="button">Apply here!</button>
+								<div class="morph-content">
+								<div>
+								<div class="content-style-text">
+									<span class="icon icon-close"></span>
+									<h2>General Instruction</h2>
+									<p><strong>1. This Consolidated General Application Form (CGAF) is written in the English language. Enter
+										legibly all the information required into the appropriate spaces on the form. If information required
+										is not applicable with your application, please write “N/A” therein. Do not leave any item blank.
+										The Bureau will not act on application forms that are accomplished incorrectly. All entries must
+										be in CAPITAL LETTERS. Your answers must be in English and must use English characters
+										only. Letters like ñ, é, ü, and ç are not recognized by the system. For instance, please enter
+										names like “Muñoz” and “Sémonin” as “Munoz” and “Semonin”, respectively.</strong><br>
+										<strong>2. The CGAF must be accomplished in duplicate [two (2) copies].</strong><br>
+										<strong>3. All sworn statements or affidavit must be duly notarized.</strong><br>
+										<strong>4. Documents executed outside the Philippines must be authenticated by the Philippine
+										Embassy/Consular Officials of the Philippine foreign service at the place of issuance or nearest to
+										it, with English translation, if written in other foreign language.</strong><br>
+										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
+										otherwise your application or petition cannot be processed immediately.</strong><br></p>
+									<div class="services1-form">
+
+										<?php $form = ActiveForm::begin(); ?>
+
+										<?= Html::activeHiddenInput($model, 'user_id') ?>
+
+										<?= Html::activeHiddenInput($model, 'slist_id', array('value'=>6)); ?>
+										<div class="form-group">
+										<p align= "right">	<?= Html::submitButton($model->isNewRecord ? 'Apply' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?> </p>
+										</div>
+
+										<?php ActiveForm::end(); ?>
+
+									</div>
+									
+								</div>
+								</div>
+								</div>
+						</div><!-- morph-button -->
+					</div><br><br>
 							<p>Foreign nationals who are proceeding to Philippines to engage in any lawful occupation, whether for wages or salary or other forms of compensation.</p>
 						</div></div>
 						<div class="clear"></div>
 						
 						<div class="mediabox">
 							<a href="#">Special Work Permit</a>
+							<div class="mockup-content">
+						<div class="morph-button morph-button-modal morph-button-modal-1 morph-button-fixed">
+							<button type="button">Apply here!</button>
+								<div class="morph-content">
+								<div>
+								<div class="content-style-text">
+									<span class="icon icon-close"></span>
+									<h2>General Instruction</h2>
+									<p><strong>1. This Consolidated General Application Form (CGAF) is written in the English language. Enter
+										legibly all the information required into the appropriate spaces on the form. If information required
+										is not applicable with your application, please write “N/A” therein. Do not leave any item blank.
+										The Bureau will not act on application forms that are accomplished incorrectly. All entries must
+										be in CAPITAL LETTERS. Your answers must be in English and must use English characters
+										only. Letters like ñ, é, ü, and ç are not recognized by the system. For instance, please enter
+										names like “Muñoz” and “Sémonin” as “Munoz” and “Semonin”, respectively.</strong><br>
+										<strong>2. The CGAF must be accomplished in duplicate [two (2) copies].</strong><br>
+										<strong>3. All sworn statements or affidavit must be duly notarized.</strong><br>
+										<strong>4. Documents executed outside the Philippines must be authenticated by the Philippine
+										Embassy/Consular Officials of the Philippine foreign service at the place of issuance or nearest to
+										it, with English translation, if written in other foreign language.</strong><br>
+										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
+										otherwise your application or petition cannot be processed immediately.</strong><br></p>
+									<div class="services1-form">
+
+										<?php $form = ActiveForm::begin(); ?>
+
+										<?= Html::activeHiddenInput($model, 'user_id') ?>
+
+										<?= Html::activeHiddenInput($model, 'slist_id', array('value'=>8)); ?>
+										<div class="form-group">
+										<p align= "right">	<?= Html::submitButton($model->isNewRecord ? 'Apply' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?> </p>
+										</div>
+
+										<?php ActiveForm::end(); ?>
+
+									</div>
+									
+								</div>
+								</div>
+								</div>
+						</div><!-- morph-button -->
+					</div><br><br>
 							<p>Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori. </p>
 						</div>
 						<div class="mediabox">
 							<a href="#">Non-Immigrant Visa 6</a>
+							<div class="mockup-content">
+						<div class="morph-button morph-button-modal morph-button-modal-1 morph-button-fixed">
+							<button type="button">Apply here!</button>
+								<div class="morph-content">
+								<div>
+								<div class="content-style-text">
+									<span class="icon icon-close"></span>
+									<h2>General Instruction</h2>
+									<p><strong>1. This Consolidated General Application Form (CGAF) is written in the English language. Enter
+										legibly all the information required into the appropriate spaces on the form. If information required
+										is not applicable with your application, please write “N/A” therein. Do not leave any item blank.
+										The Bureau will not act on application forms that are accomplished incorrectly. All entries must
+										be in CAPITAL LETTERS. Your answers must be in English and must use English characters
+										only. Letters like ñ, é, ü, and ç are not recognized by the system. For instance, please enter
+										names like “Muñoz” and “Sémonin” as “Munoz” and “Semonin”, respectively.</strong><br>
+										<strong>2. The CGAF must be accomplished in duplicate [two (2) copies].</strong><br>
+										<strong>3. All sworn statements or affidavit must be duly notarized.</strong><br>
+										<strong>4. Documents executed outside the Philippines must be authenticated by the Philippine
+										Embassy/Consular Officials of the Philippine foreign service at the place of issuance or nearest to
+										it, with English translation, if written in other foreign language.</strong><br>
+										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
+										otherwise your application or petition cannot be processed immediately.</strong><br></p>
+									<div class="services1-form">
+
+										<?php $form = ActiveForm::begin(); ?>
+
+										<?= Html::activeHiddenInput($model, 'user_id') ?>
+
+										<?= Html::activeHiddenInput($model, 'slist_id', array('value'=>7)); ?>
+										<div class="form-group">
+										<p align= "right">	<?= Html::submitButton($model->isNewRecord ? 'Apply' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?> </p>
+										</div>
+
+										<?php ActiveForm::end(); ?>
+
+									</div>
+									
+								</div>
+								</div>
+								</div>
+						</div><!-- morph-button -->
+					</div><br><br>
 							<p>Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori. </p>
 						</div>
 						<div class="mediabox">
 							<a href="#">Non-Immigrant Visa 7</a>
+							<div class="mockup-content">
+						<div class="morph-button morph-button-modal morph-button-modal-1 morph-button-fixed">
+							<button type="button">Apply here!</button>
+								<div class="morph-content">
+								<div>
+								<div class="content-style-text">
+									<span class="icon icon-close"></span>
+									<h2>General Instruction</h2>
+									<p><strong>1. This Consolidated General Application Form (CGAF) is written in the English language. Enter
+										legibly all the information required into the appropriate spaces on the form. If information required
+										is not applicable with your application, please write “N/A” therein. Do not leave any item blank.
+										The Bureau will not act on application forms that are accomplished incorrectly. All entries must
+										be in CAPITAL LETTERS. Your answers must be in English and must use English characters
+										only. Letters like ñ, é, ü, and ç are not recognized by the system. For instance, please enter
+										names like “Muñoz” and “Sémonin” as “Munoz” and “Semonin”, respectively.</strong><br>
+										<strong>2. The CGAF must be accomplished in duplicate [two (2) copies].</strong><br>
+										<strong>3. All sworn statements or affidavit must be duly notarized.</strong><br>
+										<strong>4. Documents executed outside the Philippines must be authenticated by the Philippine
+										Embassy/Consular Officials of the Philippine foreign service at the place of issuance or nearest to
+										it, with English translation, if written in other foreign language.</strong><br>
+										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
+										otherwise your application or petition cannot be processed immediately.</strong><br></p>
+									<div class="services1-form">
+
+										<?php $form = ActiveForm::begin(); ?>
+
+										<?= Html::activeHiddenInput($model, 'user_id') ?>
+
+										<?= Html::activeHiddenInput($model, 'slist_id', array('value'=>7)); ?>
+										<div class="form-group">
+										<p align= "right">	<?= Html::submitButton($model->isNewRecord ? 'Apply' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?> </p>
+										</div>
+
+										<?php ActiveForm::end(); ?>
+
+									</div>
+									
+								</div>
+								</div>
+								</div>
+						</div><!-- morph-button -->
+					</div><br><br>
 							<p>Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori. </p>
 						</div>
 						

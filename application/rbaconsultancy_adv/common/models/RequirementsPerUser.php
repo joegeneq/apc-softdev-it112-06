@@ -16,6 +16,7 @@ use Yii;
  * @property integer $service_id
  *
  * @property RequirementsList $rlist
+ * @property Services $services
  */
 class RequirementsPerUser extends \yii\db\ActiveRecord
 {
@@ -62,5 +63,15 @@ class RequirementsPerUser extends \yii\db\ActiveRecord
     public function getRlist()
     {
         return $this->hasOne(RequirementsList::className(), ['rlist_id' => 'rlist_id']);
+    }
+
+        public function getSlist()
+    {
+        return $this->hasOne(ServiceList::className(), ['slist_id' => 'service_id']);
+    }
+
+        public function getUser()
+    {
+        return $this->hasOne(User::className(), ['id' => 'user_id']);
     }
 }

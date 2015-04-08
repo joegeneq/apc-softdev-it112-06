@@ -23,6 +23,8 @@ class RequirementsPerUser extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+	public $file; 
+	 
     public static function tableName()
     {
         return 'requirements_per_user';
@@ -37,6 +39,7 @@ class RequirementsPerUser extends \yii\db\ActiveRecord
             [['rpu_status', 'rlist_id', 'user_id', 'service_id'], 'required'],
             [['rpu_datefilesubmitted'], 'safe'],
             [['rlist_id', 'user_id', 'service_id'], 'integer'],
+			[['file'],'file'],
             [['rpu_status', 'rpu_fileuploaded'], 'string', 'max' => 255]
         ];
     }

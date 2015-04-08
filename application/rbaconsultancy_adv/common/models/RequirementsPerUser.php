@@ -23,7 +23,7 @@ class RequirementsPerUser extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-	public $file; 
+	public $file;
 	 
     public static function tableName()
     {
@@ -50,10 +50,10 @@ class RequirementsPerUser extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'rpu_id' => 'Rpu ID',
-            'rpu_status' => 'Rpu Status',
-            'rpu_datefilesubmitted' => 'Rpu Datefilesubmitted',
-            'rpu_fileuploaded' => 'Rpu Fileuploaded',
+            'rpu_id' => 'Requirement ID',
+            'rpu_status' => 'Requirement Status',
+            'rpu_datefilesubmitted' => 'Requirement File Submitted',
+            'rpu_fileuploaded' => 'Requirement Date Uploaded',
             'rlist_id' => 'Rlist ID',
             'user_id' => 'User ID',
             'service_id' => 'Service ID',

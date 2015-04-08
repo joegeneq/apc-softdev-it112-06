@@ -15,15 +15,15 @@ use dosamigos\datepicker\DatePicker;
 
     <?= $form->field($model, 'username')->textInput(['maxlength' => 255]) ?>
 
-    <?= $form->field($model, 'auth_key')->textInput(['maxlength' => 32]) ?>
+    <?= $form->field($model, 'auth_key')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
 
-    <?= $form->field($model, 'password_hash')->textInput(['maxlength' => 255]) ?>
+    <?= $form->field($model, 'password_hash')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
 
-    <?= $form->field($model, 'password_reset_token')->textInput(['maxlength' => 255]) ?>
+    <?= $form->field($model, 'password_reset_token')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
 
     <?= $form->field($model, 'email')->textInput(['placeholder'=>'name@email.com', 'maxlength' => 255]) ?>
 
-    <?= $form->field($model, 'status')->textInput() ?>
+   <!--  <?= $form->field($model, 'status')->textInput() ?> -->
 
     <?= $form->field($model, 'created_at')->textInput() ?>
 

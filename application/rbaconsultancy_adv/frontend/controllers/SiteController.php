@@ -4,6 +4,8 @@ namespace frontend\controllers;
 use Yii;
 use common\models\LoginForm;
 use common\models\Services;
+use common\models\UserMain;
+use common\models\UserMainSearch;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
@@ -157,6 +159,19 @@ class SiteController extends Controller
 
     public function actionMyAccount()
     {
+		
+		$id=Yii::$app->user->identity->id;
+		 $model = $this->findModel($id);
+
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id]);
+        } else {
+            return $this->render('my-account', [
+                'model' => $model,
+            ]);
+        }
+		
         if (Yii::$app->user->isGuest) {
             return $this->redirect('./index.php?r=site%2Flogin');
         } else {
@@ -215,5 +230,13 @@ class SiteController extends Controller
         return $this->render('resetPassword', [
             'model' => $model,
         ]);
+    }
+	protected function findModel($id)
+    {
+        if (($model = UserMain::findOne($id)) !== null) {
+            return $model;
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist.');
+        }
     }
 }

@@ -26,6 +26,7 @@ use yii\captcha\Captcha;
 						echo "<li><a href=\"./index.php?r=site%2Flogout\">Logout, " . (Yii::$app->user->identity->username) . "</a></li>" ;
 					} else {						
 						echo "<li><a href=\"./index.php?r=site%2Fmy-account\">My Account</a></li>" ;
+						echo "<li><a href=\"./index.php?r=site%2Fmy-visa\">My Visa Application</a></li>" ;
 						echo "<li><a href=\"./index.php?r=site%2Flogout\">Logout, " . (Yii::$app->user->identity->username) . "</a></li>" ;
 					}
 				}

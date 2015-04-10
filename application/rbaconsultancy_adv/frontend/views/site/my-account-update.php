@@ -46,39 +46,39 @@ use dosamigos\datepicker\DatePicker;
 
 			<?php $form = ActiveForm::begin(); ?>
 
-					<?= $form->field($model, 'username')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
+					<?= $form->field($model, 'username')->textInput(['maxlength' => 255]) ?>
 
-					<?= $form->field($model, 'email')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
+					<?= $form->field($model, 'email')->textInput(['placeholder'=>'name@email.com', 'maxlength' => 255]) ?>
 
 				   <!--  <?= $form->field($model, 'status')->textInput() ?> -->
 
-				   <?= $form->field($model, 'user_lastname')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
+				   <?= $form->field($model, 'user_lastname')->textInput(['maxlength' => 25]) ?>
 
-					<?= $form->field($model, 'user_firstname')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
+					<?= $form->field($model, 'user_firstname')->textInput(['maxlength' => 25]) ?>
 
-					<?= $form->field($model, 'user_midname')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
+					<?= $form->field($model, 'user_midname')->textInput(['maxlength' => 25]) ?>
 
-					<?= $form->field($model, 'user_mobile')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
+					<?= $form->field($model, 'user_mobile')->textInput(['maxlength' => 45]) ?>
 
-					<?= $form->field($model, 'user_telephone')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
+					<?= $form->field($model, 'user_telephone')->textInput(['maxlength' => 45]) ?>
 
-					<?= $form->field($model, 'user_housenum')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
+					<?= $form->field($model, 'user_housenum')->textInput(['maxlength' => 25]) ?>
 
-					<?= $form->field($model, 'user_street')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
+					<?= $form->field($model, 'user_street')->textInput(['maxlength' => 25]) ?>
 
-					<?= $form->field($model, 'user_city')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
+					<?= $form->field($model, 'user_city')->textInput(['maxlength' => 25]) ?>
 
-					<?= $form->field($model, 'user_country')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
+					<?= $form->field($model, 'user_country')->textInput(['maxlength' => 25]) ?>
 
-					<?= $form->field($model, 'user_postalcode')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
+					<?= $form->field($model, 'user_postalcode')->textInput() ?>
 
-					<?= $form->field($model, 'user_gender')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
+					<?= $form->field($model, 'user_gender')->textInput(['maxlength' => 6]) ?>
 
-					<?= $form->field($model, 'user_companyname')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
+					<?= $form->field($model, 'user_companyname')->textInput(['maxlength' => 45]) ?>
 
-					<?= $form->field($model, 'user_companyadd')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
+					<?= $form->field($model, 'user_companyadd')->textInput(['maxlength' => 45]) ?>
 
-					<?= $form->field($model, 'user_companycontact')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
+					<?= $form->field($model, 'user_companycontact')->textInput(['maxlength' => 45]) ?>
 
 					<?= $form->field($model, 'user_birthdate')->widget(
 					DatePicker::className(), [
@@ -90,15 +90,15 @@ use dosamigos\datepicker\DatePicker;
 						'clientOptions' => [
 							'autoclose' => true,
 							'format' => 'dd-M-yyyy'
-							
 						]
 					]);?>
 
-					<?= $form->field($model, 'user_age')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
+					<?= $form->field($model, 'user_age')->textInput() ?>
 
 				
 			<div class="form-group">
-				 <?= Html::a('Edit', ['my-account-update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>	</div>
+				<?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+			</div>
 
 			<?php ActiveForm::end(); ?>
 

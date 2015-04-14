@@ -25,10 +25,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'headerOptions'=>['class'=>'kartik-sheet-style']
         ],
 
-        [
+/*        [
             'attribute'=>'slist_id', 
-        /*    'value'=>'slist.slist_name',
-*/           'width'=>'250px',
+            'width'=>'250px',
              'value'=>function ($model, $key, $index, $widget) { 
                 return Html::a($model->slist->slist_name,  
                     './index.php?r=servicelist%2Fview&id='.$model->slist->slist_id, 
@@ -43,11 +42,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'filterInputOptions'=>['placeholder'=>'Select Service'],
             'format'=>'raw',
             'label' => 'Service',
-        ],
+        ],*/
 
-        ['label' => 'Requirement Name', 'attribute' => 'rlist_name', 'width'=>'250px',],
-        ['label' => 'Requirement Description', 'attribute' => 'rlist_desc'],
-        ['label' => 'Date Added', 'attribute' => 'rlist_dateadded'],
+        ['label' => 'Requirement Name', 'value' => 'rlist_name', 'width'=>'250px',],
+        ['label' => 'Requirement Description', 'value' => 'rlist_desc'],
+        ['label' => 'Date Added', 'value' => 'rlist_dateadded'],
 
 
         ['class' => 'kartik\grid\ActionColumn'],
@@ -64,7 +63,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'headerRowOptions'=>['class'=>'kartik-sheet-style'],
         'filterRowOptions'=>['class'=>'kartik-sheet-style'],
         'pjax' => true, 
-        'floatHeader'=>true,
+        'floatHeader'=>false,
         'panel' => [
             'heading'=>'<h3 class="panel-title"><i class="glyphicon glyphicon-list-alt"></i>&nbsp&nbsp Requirements List</h3>',
             'type'=>GridView::TYPE_PRIMARY,

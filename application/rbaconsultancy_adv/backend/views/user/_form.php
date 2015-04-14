@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use dosamigos\datepicker\DatePicker;
+use kartik\widgets\DateTimePicker;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\UserMain */
@@ -57,18 +57,15 @@ use dosamigos\datepicker\DatePicker;
 
     <?= $form->field($model, 'user_companycontact')->textInput(['maxlength' => 45]) ?>
 
-	<?= $form->field($model, 'user_birthdate')->widget(
-    DatePicker::className(), [
-        // inline too, not bad
-         'inline' => false, 
-		 'options' => ['placeholder' => 'Select Birth Date ...'],
-         // modify template for custom rendering
-        //'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
-        'clientOptions' => [
+     <?= $form->field($model, 'user_birthdate')->widget(DateTimePicker::classname(), [
+        /*'readonly' => true,*/
+        'options' => ['placeholder' => 'Date Added ...'],
+        'pluginOptions' => [
             'autoclose' => true,
-            'format' => 'dd-M-yyyy'
+            
+            'format' => 'mm/dd/yyyy hh:ii:ss',
         ]
-	]);?>
+    ]); ?>
 
     <?= $form->field($model, 'user_age')->textInput() ?>
 

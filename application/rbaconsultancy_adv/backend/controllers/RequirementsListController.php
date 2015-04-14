@@ -14,6 +14,8 @@ use yii\filters\VerbFilter;
  */
 class RequirementsListController extends Controller
 {
+    public $layout = 'custom';
+
     public function behaviors()
     {
         return [

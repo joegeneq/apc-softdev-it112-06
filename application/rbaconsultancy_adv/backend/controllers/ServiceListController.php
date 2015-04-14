@@ -5,6 +5,8 @@ namespace backend\controllers;
 use Yii;
 use common\models\Servicelist;
 use common\models\ServicelistSearch;
+use common\models\Requirementslist;
+use common\models\RequirementsListSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -53,9 +55,21 @@ class ServicelistController extends Controller
      */
     public function actionView($id)
     {
+
+      /*  $reqsql = 'SELECT requirements_list.rlist_name
+        FROM requirements_list, service_list, services 
+        WHERE requirements_list.slist_id = service_list.slist_id and services.slist_id = service_list.slist_id and services.user_id = 3';
+
+        $rlist = RequirementsList::findBySql($reqsql)->all();    */      
+        $searchModel = new RequirementslistSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        
         return $this->render('view', [
             'model' => $this->findModel($id),
-        ]);
+                'searchModel' => $searchModel,
+                'dataProvider' => $dataProvider,
+            /*'rlist' => $rlist,*/
+            ]);
     }
 
     /**

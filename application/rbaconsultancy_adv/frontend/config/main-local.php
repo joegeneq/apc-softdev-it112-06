@@ -7,6 +7,12 @@ $config = [
             'cookieValidationKey' => 'aHLt37mqqW4f5niOrpjlyYlgQoMaumnl',
         ],
     ],
+
+    'modules' => [
+        'gridview' =>  [
+        'class' => '\kartik\grid\Module'
+            ]
+        ],
 ];
 
 if (!YII_ENV_TEST) {

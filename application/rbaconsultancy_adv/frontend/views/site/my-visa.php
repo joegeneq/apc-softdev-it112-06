@@ -55,7 +55,7 @@ use yii\widgets\ActiveForm;
             <h3>My Visa Application</h3>
             <ul>
                <li><a href="index.php">Home / </a></li>
-               <li><a href="./index.php?r=site%2Fmy-account"><span>My Visa Application</span></a></li>
+               <li><a href="./index.php?r=site%2Fmy-visa"><span>My Visa Application</span></a></li>
             </ul>
          </div>
 

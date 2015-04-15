@@ -1,4 +1,25 @@
- <?php
+<script type="text/javascript">
+<!--//
+function sizeFrame(frameId) {
+
+var F = document.getElementById(frameId);
+if(F.contentDocument) {
+F.height = F.contentDocument.documentElement.scrollHeight+30; //FF 3.0.11, Opera 9.63, and Chrome
+} else {
+
+
+
+F.height = F.contentWindow.document.body.scrollHeight+30; //IE6, IE7 and Chrome
+
+}
+
+}
+
+// window.onload=sizeFrame; 
+
+//-->
+</script>
+<?php
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
@@ -42,69 +63,10 @@ use dosamigos\datepicker\DatePicker;
          <br>
 
       
-          <div class="user-main-form">
-
-			<?php $form = ActiveForm::begin(); ?>
-
-					<?= $form->field($model, 'username')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
-
-					<?= $form->field($model, 'email')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
-
-				   <!--  <?= $form->field($model, 'status')->textInput() ?> -->
-
-				   <?= $form->field($model, 'user_lastname')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
-
-					<?= $form->field($model, 'user_firstname')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
-
-					<?= $form->field($model, 'user_midname')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
-
-					<?= $form->field($model, 'user_mobile')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
-
-					<?= $form->field($model, 'user_telephone')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
-
-					<?= $form->field($model, 'user_housenum')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
-
-					<?= $form->field($model, 'user_street')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
-
-					<?= $form->field($model, 'user_city')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
-
-					<?= $form->field($model, 'user_country')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
-
-					<?= $form->field($model, 'user_postalcode')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
-
-					<?= $form->field($model, 'user_gender')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
-
-					<?= $form->field($model, 'user_companyname')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
-
-					<?= $form->field($model, 'user_companyadd')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
-
-					<?= $form->field($model, 'user_companycontact')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
-
-					<?= $form->field($model, 'user_birthdate')->widget(
-					DatePicker::className(), [
-						// inline too, not bad
-						 'inline' => false, 
-						 'options' => ['placeholder' => 'Select Birth Date ...'],
-						 // modify template for custom rendering
-						//'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
-						'clientOptions' => [
-							'autoclose' => true,
-							'format' => 'dd-M-yyyy'
-							
-						]
-					]);?>
-
-					<?= $form->field($model, 'user_age')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
-
-				
-			<div class="form-group">
-				 <?= Html::a('Edit', ['my-account-update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>	</div>
-
-			<?php ActiveForm::end(); ?>
-
-
-         <br>
-      </div>
+         <iframe width="100%" id="myFrame" src="./index.php?r=user%2Fview&id=<?= $model->id?>" scrolling="no" frameborder="0" onload="sizeFrame('myFrame')">
+			An iframe capable browser is
+			required to view this web page.
+			</iframe>
       </div>
 
  

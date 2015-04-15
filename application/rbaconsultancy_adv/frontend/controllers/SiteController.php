@@ -174,23 +174,7 @@ class SiteController extends Controller
 		
         
     }
- public function actionMyAccountUpdate()
-    {
-		
-		$id=Yii::$app->user->identity->id;
-		 $model = $this->findModel($id);
 
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['my-account', 'id' => $model->id]);
-        } else {
-            return $this->render('my-account-update', [
-                'model' => $model,
-            ]);
-        }
-		
-        
-    }
     public function actionSignup()
     {
         $model = new SignupForm();

@@ -66,12 +66,14 @@ class RequirementsPerUserController extends Controller
     public function actionCreate()
     {
         $model = new RequirementsPerUser();
-		$imageName = $model->rpu_datefilesubmitted;
-		$model->file = UploadedFile::getInstance($model,'file');
-		$model->file = saveAs('uploaded_rpu/'.$imageName.'.'.$model->file->extension );
+        $ImageName = $model->RequirementsPerUser;
 		
-		$model->rpu_fileuploaded = 'uploaded_rpu/'.$imageName.'.'.$model->file->extension;
-
+		$model->file = UploadedFile::getInstance($model,'file');
+		$fileName = $model->file->name;
+        $model->file->saveAs('uploaded_rpu/'. $fileName);
+        $model->rpu_fileuploaded = 'uploaded_rpu/'. $fileName;
+        $model->save();		
+			
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->rpu_id]);
         } else {
@@ -82,7 +84,7 @@ class RequirementsPerUserController extends Controller
     }
 
     /**
-     * Updates an existing RequirementsPerUser model.
+     * Updates an existing as model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -92,6 +94,12 @@ class RequirementsPerUserController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+		$model->file = UploadedFile::getInstance($model,'file');
+		$fileName = $model->file->name;
+        $model->file->saveAs('uploaded_rpu/'. $fileName);
+        $model->rpu_fileuploaded = 'uploaded_rpu/'. $fileName;
+        $model->save();
+		//////////////////////////////////////
             return $this->redirect(['view', 'id' => $model->rpu_id]);
         } else {
             return $this->render('update', [

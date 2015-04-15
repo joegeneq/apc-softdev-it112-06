@@ -3,7 +3,9 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
-use dosamigos\datepicker\DatePicker;
+
+use kartik\widgets\DateTimePicker;
+
 use common\models\UserMain;
 use common\models\ServiceList;
 
@@ -38,22 +40,22 @@ use common\models\ServiceList;
                                 ['prompt'=>'Select Service...'])->label('Service Acquired') ;
     ?>
 
-  	<?= $form->field($model, 'service_dateapplied')->widget(
-    DatePicker::className(), [
-        // inline too, not bad
-         'inline' => false, 
-		 'options' => ['placeholder' => 'Select Date of Application ...'],
-         // modify template for custom rendering
-        //'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
-        'clientOptions' => [
+    <?= $form->field($model, 'service_dateapplied')->widget(DateTimePicker::classname(), [
+        'readonly' => false,
+        'options' => ['placeholder' => 'Date Applied'],
+        'pluginOptions' => [
             'autoclose' => true,
-            'format' => 'dd-M-yyyy'
+            'format' => 'yyyy-mm-dd hh:ii:ss',
         ]
-	]);?>
+    ]); ?>
 
     <?= $form->field($model, 'service_status')->dropDownList([
                 'Pending' => 'Pending', 'Ongoing' => 'Ongoing', 'Completed' => 'Completed', 'Cancelled' => 'Cancelled'])
                 ->label('Visa Application Status')  ?>
+
+    <br>
+    <br>
+    <br>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

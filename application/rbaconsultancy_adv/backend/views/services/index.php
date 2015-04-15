@@ -50,11 +50,7 @@ $this->params['breadcrumbs'][] = $this->title;
         [
             'attribute'=>'slist_id', 
             'width'=>'250px',
-             'value'=>function ($model, $key, $index, $widget) { 
-                return Html::a($model->slist->slist_name,  
-                    './index.php?r=servicelist%2Fview&id='.$model->slist->slist_id, 
-                    ['title'=>'View Service detail']);
-            },
+            'value'=> 'slist.slist_name',  
             'vAlign'=>'middle',
             'filterType'=>GridView::FILTER_SELECT2,
             'filter'=>ArrayHelper::map(ServiceList::find()->orderBy('slist_name')->asArray()->all(), 'slist_id', 'slist_name'), 

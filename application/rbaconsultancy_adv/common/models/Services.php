@@ -47,9 +47,7 @@ class Services extends \yii\db\ActiveRecord
         return [
             'service_id' => 'Service ID',
             'user_id' => 'User ID',
-            'user.username' => 'Acquired by',
             'slist_id' => 'Slist ID',
-            'servicelist.slist_name'=> 'Service',
             'service_dateapplied' => 'Date Applied',
             'service_status' => 'Status',
         ];

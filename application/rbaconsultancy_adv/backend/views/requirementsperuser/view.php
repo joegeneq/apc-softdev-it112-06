@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="requirements-per-user-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h2><?= Html::encode($this->title) ?></h2>
 
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->rpu_id], ['class' => 'btn btn-primary']) ?>
@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             ['attribute' => 'rpu_id', 'label' => 'Requirement Number'],
-            ['attribute' => 'slist.slist_name', 'label' => 'Service Acquired'],
+            ['attribute' => 'service_id', 'label' => 'Service Acquired'],
             ['attribute' => 'user.username', 'label' => 'Acquired By'],
             ['attribute' => 'rlist.rlist_name', 'label' => 'Requirement'],
             ['attribute' => 'rpu_datefilesubmitted', 'label' => 'Date Submitted'],

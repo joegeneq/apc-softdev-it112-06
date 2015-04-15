@@ -15,6 +15,8 @@ use yii\web\UploadedFile;
  */
 class RequirementsPerUserController extends Controller
 {
+    public $layout = 'custom';
+    
     public function behaviors()
     {
         return [
@@ -65,15 +67,17 @@ class RequirementsPerUserController extends Controller
      */
     public function actionCreate()
     {
-        $model = new RequirementsPerUser();
-		$imageName = $model->rpu_datefilesubmitted;
-		$model->file = UploadedFile::getInstance($model,'file');
-		$model->file = saveAs('uploaded_rpu/'.$imageName.'.'.$model->file->extension );
-		
-		$model->rpu_fileuploaded = 'uploaded_rpu/'.$imageName.'.'.$model->file->extension;
+        
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->rpu_id]);
+            $model = new RequirementsPerUser();
+            $imageName = $model->rpu_datefilesubmitted;
+            $model->file = UploadedFile::getInstance($model,'file');
+            $model->file = saveAs('uploaded_rpu/'.$imageName.'.'.$model->file->extension );
+            
+            $model->rpu_fileuploaded = 'uploaded_rpu/'.$imageName.'.'.$model->file->extension;
+            /*return $this->redirect(['view', 'id' => $model->rpu_id]);*/
+            return $this->redirect(['index']);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -92,7 +96,8 @@ class RequirementsPerUserController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->rpu_id]);
+            /*return $this->redirect(['view', 'id' => $model->rpu_id]);*/
+            return $this->redirect(['index']);
         } else {
             return $this->render('update', [
                 'model' => $model,

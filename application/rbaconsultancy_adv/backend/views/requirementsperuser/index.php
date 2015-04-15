@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             //'rpu_id',
        
-        [
+/*        [
             'attribute'=>'service_id', 
             'width'=>'250px',
              'value'=>function ($model, $key, $index, $widget) { 
@@ -46,9 +46,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'filterInputOptions'=>['placeholder'=>'Select Service'],
             'format'=>'raw',
             'label' => 'Service Acquired',
-        ],
+        ],*/
 
-        [
+/*        [
             'attribute'=>'user_id', 
             'width'=>'250px',
              'value'=>function ($model, $key, $index, $widget) { 
@@ -66,34 +66,24 @@ $this->params['breadcrumbs'][] = $this->title;
             'filterInputOptions'=>['placeholder'=>'Select Client'],
             'format'=>'raw',
             'label' => 'Acquired by',
-        ],
+        ],*/
 
         [
-            'attribute'=>'rlist_id', 
-            'width'=>'250px',
-             'value'=>function ($model, $key, $index, $widget) { 
-                return Html::a($model->rlist->rlist_name,
-                    './index.php?r=requirementslist%2Fview&id='.$model->rlist->rlist_id,
-                        ['title'=>'View Requirement detail']
-                        );  
-            },
-            'vAlign'=>'middle',
-            'filterType'=>GridView::FILTER_SELECT2,
-            'filter'=>ArrayHelper::map(RequirementsList::find()->orderBy('rlist_name')->asArray()->all(), 'rlist_id', 'rlist_name'), 
-            'filterWidgetOptions'=>[
-                'pluginOptions'=>['allowClear'=>true],
-                ],
-            'filterInputOptions'=>['placeholder'=>'Select Requirements'],
-            'format'=>'raw',
-            'label' => 'Requirements No.',
+           /* 'attribute'=>'rlist_id', */
+            'value'=> 'rlist.rlist_name',
+            'label' => 'Requirements Name',
         ],
 
-            ['attribute' => 'rpu_datefilesubmitted', 'label' => 'Date Submitted',], //date
-            ['attribute' => 'rpu_fileuploaded', 'label' => 'File Uploaded',], //uploaded files, if applicable
-            ['attribute' => 'rpu_status', 'label' => 'Status',],
+            ['value' => 'rpu_datefilesubmitted', 'label' => 'Date Submitted',], //date
+            ['value' => 'rpu_fileuploaded', 'label' => 'File Uploaded',], //uploaded files, if applicable
+            ['value' => 'rpu_status', 'label' => 'Status',],
 
 
-        ['class' => 'kartik\grid\ActionColumn'],
+        [
+        'class' => '\kartik\grid\ActionColumn',
+        'viewOptions' => ['hidden' => true],
+        'deleteOptions' => ['hidden' => true],
+        ],
     ];
 
     echo GridView::widget([
@@ -107,12 +97,10 @@ $this->params['breadcrumbs'][] = $this->title;
         'headerRowOptions'=>['class'=>'kartik-sheet-style'],
         'filterRowOptions'=>['class'=>'kartik-sheet-style'],
         'pjax' => true, 
-        'floatHeader'=>true,
+        'floatHeader'=>false,
         'panel' => [
             'heading'=>'<h3 class="panel-title"><i class="glyphicon glyphicon-folder-open"></i>&nbsp&nbsp Requirements Per User</h3>',
             'type'=>GridView::TYPE_PRIMARY,
-            'before'=>Html::tag('p', '*This is auto-generated when a client applied for Visa.'),
-            'after'=>Html::a('<i class="glyphicon glyphicon-repeat"></i> Reset Grid', ['index'], ['class' => 'btn btn-info']),
         ],
 
     ]); 

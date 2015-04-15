@@ -19,7 +19,7 @@ use common\models\RequirementsList;
 
 <div class="requirements-per-user-form">
 
-    <?php $form = ActiveForm::begin(['options' =>['enctype' => 'multipart/form-data']]); ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>  
 
   <!--   <?= $form->field($model, 'rlist_id')->textInput(array('readonly' => true, 'placeholder' => 'Requirement No. is auto-generated.'))->label('Requirement No.') ?>
  -->
@@ -53,9 +53,15 @@ use common\models\RequirementsList;
                                     ['prompt'=>'Select Service...'])->label('Service Acquired') ;
     ?> -->
 
+<<<<<<< HEAD
     <?= $form->field($model, 'file')->widget(FileInput::classname(),[
         'name' => 'attachment_3',
         ])->label('Upload File') ?>
+=======
+    <?= $form->field($model, 'file')->fileInput()->label('File Uploaded') ?>
+	
+    <?= $form->field($model, 'rpu_datefilesubmitted')->textInput()->label('Date Submitted') ?>
+>>>>>>> 8a50f006aa3a6454f2865fbb0f793d179c59ca0c
     
 
     <?= $form->field($model, 'rpu_datefilesubmitted')->widget(DateTimePicker::classname(), [

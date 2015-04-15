@@ -2,27 +2,28 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use kartik\widgets\DateTimePicker;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\UserMain */
+/* @var $model frontend\models\User */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="user-main-form">
+<div class="user-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'username')->textInput(['maxlength' => 255]) ?>
 
-    <?= $form->field($model, 'auth_key')->textInput(['maxlength' => 32]) ?>
+    <?= $form->field($model, 'auth_key')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
 
-    <?= $form->field($model, 'password_hash')->textInput(['maxlength' => 255]) ?>
+    <?= $form->field($model, 'password_hash')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
 
-    <?= $form->field($model, 'password_reset_token')->textInput(['maxlength' => 255]) ?>
+    <?= $form->field($model, 'password_reset_token')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
 
-    <?= $form->field($model, 'email')->textInput(['maxlength' => 255]) ?>
+    <?= $form->field($model, 'email')->textInput(['placeholder'=>'name@email.com', 'maxlength' => 255]) ?>
 
-    <?= $form->field($model, 'status')->textInput() ?>
+   <!--  <?= $form->field($model, 'status')->textInput() ?> -->
 
     <?= $form->field($model, 'created_at')->textInput() ?>
 
@@ -56,7 +57,15 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'user_companycontact')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'user_birthdate')->textInput() ?>
+     <?= $form->field($model, 'user_birthdate')->widget(DateTimePicker::classname(), [
+        /*'readonly' => true,*/
+        'options' => ['placeholder' => 'Date Added ...'],
+        'pluginOptions' => [
+            'autoclose' => true,
+            
+            'format' => 'mm/dd/yyyy hh:ii:ss',
+        ]
+    ]); ?>
 
     <?= $form->field($model, 'user_age')->textInput() ?>
 

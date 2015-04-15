@@ -1,6 +1,6 @@
 <?php
 
-namespace common\models;
+namespace frontend\models;
 
 use Yii;
 
@@ -13,11 +13,10 @@ use Yii;
  * @property string $service_dateapplied
  * @property string $service_status
  *
- * @property RequirementsPerUser[] $requirementsPerUsers
  * @property User $user
  * @property ServiceList $slist
  */
-class Services1 extends \yii\db\ActiveRecord
+class Services extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
@@ -52,14 +51,6 @@ class Services1 extends \yii\db\ActiveRecord
             'service_dateapplied' => 'Service Dateapplied',
             'service_status' => 'Service Status',
         ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getRequirementsPerUsers()
-    {
-        return $this->hasMany(RequirementsPerUser::className(), ['service_id' => 'service_id']);
     }
 
     /**

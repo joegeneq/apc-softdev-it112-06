@@ -173,8 +173,7 @@ class SiteController extends Controller
         }
 		
         
-    }
- public function actionMyAccountUpdate()
+    } public function actionMyVisa()
     {
 		
 		$id=Yii::$app->user->identity->id;
@@ -182,15 +181,16 @@ class SiteController extends Controller
 
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['my-account', 'id' => $model->id]);
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
-            return $this->render('my-account-update', [
+            return $this->render('my-visa', [
                 'model' => $model,
             ]);
         }
 		
         
     }
+
     public function actionSignup()
     {
         $model = new SignupForm();

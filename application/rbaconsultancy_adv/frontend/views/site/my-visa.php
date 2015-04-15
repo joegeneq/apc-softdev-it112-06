@@ -1,4 +1,34 @@
-        
+<script type="text/javascript">
+<!--//
+function sizeFrame(frameId) {
+
+var F = document.getElementById(frameId);
+if(F.contentDocument) {
+F.height = F.contentDocument.documentElement.scrollHeight+30; //FF 3.0.11, Opera 9.63, and Chrome
+} else {
+
+
+
+F.height = F.contentWindow.document.body.scrollHeight+30; //IE6, IE7 and Chrome
+
+}
+
+}
+
+// window.onload=sizeFrame; 
+
+//-->
+</script>
+<?php
+
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+
+/* @var $this yii\web\View */
+/* @var $model common\models\Services */
+/* @var $form yii\widgets\ActiveForm */
+
+?>          
             
             <div class="top-nav">
                 <ul>
@@ -31,22 +61,10 @@
 
          <br>
 
-         <div class="container">
-            <div id='cssmenu'>
-            <ul>
-               <li><a href='#'>Account Information</a></li>
-               <li class='has-sub'><a href='#'>My Visa Applications</a>
-                  <ul>
-                     <li><a href='#'>All</a></li>
-                     <li><a href='#'>Pending</a></li>
-                     <li><a href='#'>On-going</a></li>
-                     <li><a href='#'>Cancelled/Denied</a></li>
-                     <li><a href='#'>Completed</a></li>
-                  </ul>
-               </li>
-            </ul>
-            </div>
-         </div>
+         <iframe width="100%" id="myFrame" src="./index.php?r=services%2Findex&ServicesSearch%5Buser_id%5D=<?= $model->id?>" scrolling="no" frameborder="0" onload="sizeFrame('myFrame')">
+			An iframe capable browser is
+			required to view this web page.
+			</iframe>
 
          <br>
       </div>

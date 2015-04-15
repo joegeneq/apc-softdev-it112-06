@@ -49,7 +49,10 @@ $this->params['breadcrumbs'][] = $this->title;
         ['label' => 'Date Added', 'value' => 'rlist_dateadded'],
 
 
-        ['class' => 'kartik\grid\ActionColumn'],
+        [
+        'class' => '\kartik\grid\ActionColumn',
+        'viewOptions' => ['hidden' => true]
+        ],
     ];
 
     echo GridView::widget([
@@ -68,7 +71,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'heading'=>'<h3 class="panel-title"><i class="glyphicon glyphicon-list-alt"></i>&nbsp&nbsp Requirements List</h3>',
             'type'=>GridView::TYPE_PRIMARY,
             'before'=>Html::a('<i class="glyphicon glyphicon-plus"></i> Add New Requirements', ['create'], ['class' => 'btn btn-success']),
-            'after'=>Html::a('<i class="glyphicon glyphicon-repeat"></i> Reset Grid', ['index'], ['class' => 'btn btn-info']),
+           /* 'after'=>Html::a('<i class="glyphicon glyphicon-repeat"></i> Reset Grid', ['index'], ['class' => 'btn btn-info']),*/
         ],
 
     ]); 

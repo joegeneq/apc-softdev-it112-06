@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
+
 use common\models\ServiceList;
 
 /* @var $this yii\web\View */
@@ -20,7 +21,14 @@ use common\models\ServiceList;
 
     <?= $form->field($model, 'rlist_desc')->textarea(['rows' => 6])->label('Description') ?>
 
-    <!--  <?= $form->field($model, 'rlist_dateadded')->textInput()->label('Date Added') ?> -->
+    <?= $form->field($model, 'rlist_dateadded')->widget(DateTimePicker::classname(), [
+        'readonly' => true,
+        'options' => ['placeholder' => 'Date Added ...'],
+        'pluginOptions' => [
+            'autoclose' => true,            
+            'format' => 'yyyy-mm-dd hh:ii:ss',
+        ]
+    ]); ?>
 
   	<?php
 	        $ServiceList=ServiceList::find()->all();
@@ -34,6 +42,7 @@ use common\models\ServiceList;
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <a class="btn btn-danger" href=".\index.php?r=requirementslist%2Findex">Back</a>
     </div>
 
     <?php ActiveForm::end(); ?>

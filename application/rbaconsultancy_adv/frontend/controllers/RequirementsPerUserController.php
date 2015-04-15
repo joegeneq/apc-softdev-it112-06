@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\controllers;
+namespace frontend\controllers;
 
 use Yii;
 use common\models\RequirementsPerUser;
@@ -15,7 +15,7 @@ use yii\web\UploadedFile;
  */
 class RequirementsPerUserController extends Controller
 {
-    public $layout = 'custom';
+    public $layout = 'main_1';
     
     public function behaviors()
     {
@@ -35,7 +35,6 @@ class RequirementsPerUserController extends Controller
      */
     public function actionIndex()
     {
-        if (Yii::$app->user->can('access-backend')) {  
             $searchModel = new RequirementsPerUserSearch();
             $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -43,9 +42,6 @@ class RequirementsPerUserController extends Controller
                 'searchModel' => $searchModel,
                 'dataProvider' => $dataProvider,
             ]);
-        } else {
-            throw new ForbiddenHttpException("Sorry. You are not allow to access this page. For admin only.");
-        }
     }
 
     /**
@@ -92,7 +88,7 @@ class RequirementsPerUserController extends Controller
 
             $model->file = UploadedFile::getInstance($model,'file');
             $fileName = $model->file->name;
-            $model->file->saveAs('uploaded_rpu/'. $fileName);
+            $model->file->saveAs('../../backend/web/uploaded_rpu/'. $fileName);
             $model->rpu_fileuploaded = $fileName;
 
 

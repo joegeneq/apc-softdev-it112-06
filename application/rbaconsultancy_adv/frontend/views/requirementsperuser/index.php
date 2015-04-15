@@ -12,7 +12,6 @@ use common\models\ServiceList;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Requirements Per Users';
-$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="requirements-per-user-index">
 

@@ -40,7 +40,7 @@ class RequirementsPerUser extends \yii\db\ActiveRecord
     {
         return [
             [['rpu_status', 'rlist_id', 'user_id', 'service_id'], 'required'],
-            [['file', 'rpu_datefilesubmitted'], 'safe'],
+            [['rpu_fileuploaded', 'file', 'rpu_datefilesubmitted'], 'safe'],
             [['rlist_id', 'user_id', 'service_id'], 'integer'],
 			[['file'],'file'],
             [['rpu_status', 'rpu_fileuploaded'], 'string', 'max' => 255]
@@ -56,11 +56,10 @@ class RequirementsPerUser extends \yii\db\ActiveRecord
             'rpu_id' => 'Rpu ID',
             'rpu_status' => 'Rpu Status',
             'rpu_datefilesubmitted' => 'Rpu Datefilesubmitted',
-            'rpu_fileuploaded' => 'Rpu Fileuploaded',
             'rlist_id' => 'Rlist ID',
             'user_id' => 'User ID',
             'service_id' => 'Service ID',
-			'file' => 'logo',
+			'file' => 'File Uploaded',
         ];
     }
 

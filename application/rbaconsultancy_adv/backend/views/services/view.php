@@ -25,6 +25,7 @@ F.height = F.contentWindow.document.body.scrollHeight+30; //IE6, IE7 and Chrome
 use yii\helpers\Html;
 use kartik\detail\DetailView;
 use common\models\UserMain;
+use common\models\ServiceList;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Services */
 
@@ -57,8 +58,8 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
 
             ['attribute' => 'service_id', 'label' => 'Trasaction Code'],
-            ['attribute' => 'user_id', 'value' => $model->user->username, 'label' => 'Acquired by'],/*
-            ['attribute' => 'slist.slist_name', 'label' => 'Service Acquired'],*/
+            ['attribute' => 'user_id', 'value' => $model->user->username, 'label' => 'Acquired by'],
+            ['attribute' => 'slist_id', 'value' => $model->slist->slist_name, 'label' => 'Service Acquired'],
             ['attribute' => 'service_dateapplied', 'label' => 'Date Applied'],
             ['attribute' => 'service_status', 'label' => 'Status'],
 

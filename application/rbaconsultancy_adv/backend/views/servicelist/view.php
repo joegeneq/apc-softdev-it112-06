@@ -25,7 +25,6 @@ F.height = F.contentWindow.document.body.scrollHeight+30; //IE6, IE7 and Chrome
 use yii\helpers\Html;
 /*use yii\widgets\DetailView;*/
 use kartik\detail\DetailView;
-use yii\widgets\ListView;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Servicelist */
 
@@ -94,9 +93,8 @@ $this->params['breadcrumbs'][] = $this->title;
     ] );*/
 ?>
 
-<iframe width="100%" id="myFrame" src="./index.php?r=requirementslist%2Findex&RequirementsListSearch%5Bslist_id%5D=<?= $model->slist_id?>" scrolling="no" frameborder="0" onload="sizeFrame('myFrame')">
-An iframe capable browser is
-required to view this web page.
+<iframe width="100%" id="myFrame" src="./index.php?r=requirementslist%2Findex&RequirementsListSearch%5Bslist_id%5D=<?= $model->slist_id?>"
+    scrolling="no" frameborder="0" onload="sizeFrame('myFrame')">
 </iframe>
 
 </div>

@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
+
 use kartik\widgets\DateTimePicker;
 
 /* @var $this yii\web\View */
@@ -28,9 +29,8 @@ use kartik\widgets\DateTimePicker;
         'readonly' => true,
         'options' => ['placeholder' => 'Date Added ...'],
         'pluginOptions' => [
-            'autoclose' => true,
-            
-            'format' => 'mm/dd/yyyy hh:ii:ss',
+            'autoclose' => true,            
+            'format' => 'yyyy-mm-dd hh:ii:ss',
         ]
     ]); ?>
 

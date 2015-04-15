@@ -97,7 +97,7 @@ class RequirementsPerUserController extends Controller
 		$model->file = UploadedFile::getInstance($model,'file');
 		$fileName = $model->file->name;
         $model->file->saveAs('uploaded_rpu/'. $fileName);
-        $model->rpu_fileuploaded = 'uploaded_rpu/'. $fileName;
+        $model->rpu_fileuploaded = $fileName;
         $model->save();
 		//////////////////////////////////////
             return $this->redirect(['view', 'id' => $model->rpu_id]);

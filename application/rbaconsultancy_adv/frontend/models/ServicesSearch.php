@@ -5,12 +5,12 @@ namespace frontend\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\models\Services1;
+use frontend\models\Services;
 
 /**
- * Services1Search represents the model behind the search form about `common\models\Services1`.
+ * ServicesSearch represents the model behind the search form about `frontend\models\Services`.
  */
-class Services1Search extends Services1
+class ServicesSearch extends Services
 {
     /**
      * @inheritdoc
@@ -41,7 +41,7 @@ class Services1Search extends Services1
      */
     public function search($params)
     {
-        $query = Services1::find();
+        $query = Services::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,

@@ -3,16 +3,16 @@
 namespace frontend\controllers;
 
 use Yii;
-use common\models\Services;
-use frontend\models\Services1Search;
+use frontend\models\Services;
+use frontend\models\ServicesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * Services1Controller implements the CRUD actions for Services model.
+ * ServicesController implements the CRUD actions for Services model.
  */
-class Services1Controller extends Controller
+class ServicesController extends Controller
 {
     public function behaviors()
     {
@@ -25,15 +25,15 @@ class Services1Controller extends Controller
             ],
         ];
     }
- 
- 
-       /**
+
+    /**
      * Lists all Services models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new Services1Search();
+		$this->layout = 'main_1';
+        $searchModel = new ServicesSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -49,6 +49,7 @@ class Services1Controller extends Controller
      */
     public function actionView($id)
     {
+		$this->layout = 'main_1';
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -59,15 +60,13 @@ class Services1Controller extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-	 
     public function actionCreate()
     {
-        $model = new Services();               
-        $model->user_id = Yii::$app->user->identity->id; 
-        $model->slist_id = 7; 
-            
+		$this->layout = 'main_1';
+        $model = new Services();
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-             return $this->redirect('../../frontend/web/index.php?r=site%2Fservices');
+            return $this->redirect(['view', 'id' => $model->service_id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -83,6 +82,7 @@ class Services1Controller extends Controller
      */
     public function actionUpdate($id)
     {
+		$this->layout = 'main_1';
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {

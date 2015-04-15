@@ -14,7 +14,7 @@ use common\models\UserMain;
 
 <div class="requirements-per-user-form">
 
-    <?php $form = ActiveForm::begin(['options' =>['enctype' => 'multipart/form-data']]); ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>  
 
     <?= $form->field($model, 'rlist_id')->textInput(array('readonly' => true, 'placeholder' => 'Requirement No. is auto-generated.'))->label('Requirement No.') ?>
 
@@ -38,9 +38,7 @@ use common\models\UserMain;
                                     ['prompt'=>'Select Service...'])->label('Service Acquired') ;
     ?>
 
-    <?= $form->field($model, 'rpu_fileuploaded')->fileInput()->label('File Uploaded') ?>
-    
-	<?= $form->field($model, 'file')->fileInput() ?>
+    <?= $form->field($model, 'file')->fileInput()->label('File Uploaded') ?>
 	
     <?= $form->field($model, 'rpu_datefilesubmitted')->textInput()->label('Date Submitted') ?>
     

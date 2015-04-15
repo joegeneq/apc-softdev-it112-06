@@ -25,7 +25,7 @@ use yii\grid\GridView;
             ['label' => 'Service Acquired', 'attribute' => 'slist_id',  'value' => 'slist.slist_name'],
             ['label' => 'Date Applied', 'attribute' => 'service_dateapplied'],
             ['label' => 'Visa Application Status', 'attribute' => 'service_status'],
-            ['class' => 'yii\grid\ActionColumn'],
+           
         ],
     ]); ?>
 

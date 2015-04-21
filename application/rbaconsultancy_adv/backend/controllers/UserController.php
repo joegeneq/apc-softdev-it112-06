@@ -6,6 +6,7 @@ use Yii;
 use common\models\UserMain;
 use common\models\UserMainSearch;
 use backend\models\CreateUserForm;
+
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -81,6 +82,8 @@ class UserController extends Controller
         $model = new CreateUserForm();
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->createUser()) {
+                    $path = 'uploads/'.$model->username.'/';
+                    $folder = \yii\helpers\FileHelper::createDirectory($path, $mode = 0777, $recursive = true);
                     return $this->redirect(['index']);
                 }
             

@@ -5,6 +5,8 @@ namespace backend\controllers;
 use Yii;
 use common\models\RequirementsPerUser;
 use common\models\RequirementsPerUserSearch;
+use common\models\UserMain;
+
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -91,8 +93,9 @@ class RequirementsPerUserController extends Controller
             /*return $this->redirect(['view', 'id' => $model->rpu_id]);*/
 
             $model->file = UploadedFile::getInstance($model,'file');
+            $path = 'uploads/'.$model->user->username.'/';
             $fileName = $model->file->name;
-            $model->file->saveAs('uploaded_rpu/'. $fileName);
+            $model->file->saveAs($path.$fileName);
             $model->rpu_fileuploaded = $fileName;
 
 

@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 use common\models\RequirementsPerUser;
 use common\models\RequirementsPerUserSearch;
+use common\models\UserMain;
 
 
 /* @var $this yii\web\View */
@@ -40,5 +41,5 @@ $this->params['breadcrumbs'][] = $this->title;
             ['attribute' => 'rpu_status', 'label' => 'Status'],
         ],
     ]) ?>
-    <?= Html::a('View Uploaded File','uploaded_rpu/'.$model->rpu_fileuploaded) ?>
+    <?= Html::a('View Uploaded File','uploads/'.$model->user->username.'/'.$model->rpu_fileuploaded) ?>
 </div>

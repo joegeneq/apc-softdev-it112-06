@@ -77,7 +77,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ['value' => 'rpu_datefilesubmitted', 'label' => 'Date Submitted',], //date
             ['value'=>function ($model, $key, $index, $widget) { 
                 return Html::a($model->rpu_fileuploaded,  
-                    './uploaded_rpu/'.$model->rpu_fileuploaded,
+                    'uploads/'.$model->user->username.'/'.$model->rpu_fileuploaded,
                     ['title'=>'View Uploaded File detail', 'target'=>'_blank']
                     );
              },'format'=>'raw',

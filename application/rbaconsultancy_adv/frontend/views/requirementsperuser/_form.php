@@ -21,17 +21,7 @@ use common\models\RequirementsList;
 
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>  
 
-  <!--   <?= $form->field($model, 'rlist_id')->textInput(array('readonly' => true, 'placeholder' => 'Requirement No. is auto-generated.'))->label('Requirement No.') ?>
- -->
-    <?php 
-        $user=RequirementsList::find()->all();
-
-        $listData=ArrayHelper::map($user,'rlist_id','rlist_name');
-
-        echo $form->field($model, 'rlist_id')->dropDownList(
-                                $listData, 
-                                ['readonly' => true, 'prompt'=>'Select Requirement...'])->label('Requirements') ;
-    ?>
+    <?= $form->field($model, 'rlist_id')->hiddenInput()->label(false)?>
 
 <!--     <?php 
         $user=UserMain::find()->all();

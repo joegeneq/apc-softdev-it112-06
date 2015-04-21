@@ -40,5 +40,5 @@ $this->params['breadcrumbs'][] = $this->title;
             ['attribute' => 'rpu_status', 'label' => 'Status'],
         ],
     ]) ?>
-    <?= Html::a('View Uploaded File','uploaded_rpu/'.$model->rpu_fileuploaded) ?>
+    <?= Html::a('View Uploaded File','../../backend/web/uploads/'.$model->user->username.'/'.$model->rpu_fileuploaded) ?>
 </div>

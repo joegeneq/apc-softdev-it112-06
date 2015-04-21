@@ -197,6 +197,8 @@ class SiteController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {
                 if (Yii::$app->getUser()->login($user)) {
+                    $path = '../../backend/web/uploads/'.$model->username.'/';
+                    $folder = \yii\helpers\FileHelper::createDirectory($path, $mode = 0777, $recursive = true);
                     return $this->goHome();
                 }
             }

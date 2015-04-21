@@ -18,7 +18,7 @@ use common\models\ServiceList;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'service_id')->textInput(array('readonly' => true, 'placeholder' => 'Transaction Code is auto-generated.'))->label('Transaction Code')?>
+    <?= $form->field($model, 'service_id')->hiddenInput()->label(false) ?>
 
     <?php 
         $user=UserMain::find()->all();

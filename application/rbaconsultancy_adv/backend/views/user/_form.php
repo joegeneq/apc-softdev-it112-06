@@ -14,20 +14,20 @@ use kartik\widgets\DateTimePicker;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'username')->textInput(['maxlength' => 255]) ?>
+   
+    <?= $form->field($model, 'auth_key')->hiddenInput()->label(false) ?>
 
-    <?= $form->field($model, 'auth_key')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
+    <?= $form->field($model, 'password_hash')->hiddenInput()->label(false) ?>
 
-    <?= $form->field($model, 'password_hash')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
-
-    <?= $form->field($model, 'password_reset_token')->textInput(array('readonly' => true, 'maxlength' => 255)) ?>
+    <?= $form->field($model, 'password_reset_token')->hiddenInput()->label(false) ?>
 
     <?= $form->field($model, 'email')->textInput(['placeholder'=>'name@email.com', 'maxlength' => 255]) ?>
 
    <!--  <?= $form->field($model, 'status')->textInput() ?> -->
 
-    <?= $form->field($model, 'created_at')->textInput() ?>
+    <?= $form->field($model, 'created_at')->hiddenInput()->label(false) ?>
 
-    <?= $form->field($model, 'updated_at')->textInput() ?>
+    <?= $form->field($model, 'updated_at')->hiddenInput()->label(false) ?>
 
     <?= $form->field($model, 'user_lastname')->textInput(['maxlength' => 25]) ?>
 
@@ -49,15 +49,7 @@ use kartik\widgets\DateTimePicker;
 
     <?= $form->field($model, 'user_postalcode')->textInput() ?>
 
-    <?= $form->field($model, 'user_gender')->textInput(['maxlength' => 6]) ?>
-
-    <?= $form->field($model, 'user_companyname')->textInput(['maxlength' => 45]) ?>
-
-    <?= $form->field($model, 'user_companyadd')->textInput(['maxlength' => 45]) ?>
-
-    <?= $form->field($model, 'user_companycontact')->textInput(['maxlength' => 45]) ?>
-
-     <?= $form->field($model, 'user_birthdate')->widget(DateTimePicker::classname(), [
+    <?= $form->field($model, 'user_birthdate')->widget(DateTimePicker::classname(), [
         /*'readonly' => true,*/
         'options' => ['placeholder' => 'Date Added ...'],
         'pluginOptions' => [
@@ -67,9 +59,21 @@ use kartik\widgets\DateTimePicker;
         ]
     ]); ?>
 
-    <?= $form->field($model, 'user_age')->textInput() ?>
+    <?= $form->field($model, 'user_gender')->dropDownList(
+        ['Female' => 'Female',
+         'Male' => 'Male'],
+         ['prompt'=>'Select Gender...']
+        ); ?>
 
-    <?= $form->field($model, 'user_type')->textInput(['maxlength' => 15]) ?>
+    <?= $form->field($model, 'user_companyname')->textInput(['maxlength' => 45]) ?>
+
+    <?= $form->field($model, 'user_companyadd')->textInput(['maxlength' => 45]) ?>
+
+    <?= $form->field($model, 'user_companycontact')->textInput(['maxlength' => 45]) ?>
+
+    <?= $form->field($model, 'user_age')->hiddenInput()->label(false) ?>
+
+    <?= $form->field($model, 'user_type')->hiddenInput()->label(false) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

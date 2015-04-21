@@ -15,7 +15,7 @@ use kartik\widgets\DateTimePicker;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'slist_id')->textInput(array('readonly' => true, 'placeholder' => 'Service ID is auto-generated.')) ?>
+    <?= $form->field($model, 'slist_id')->hiddenInput()->label(false) ?>
 
     <?= $form->field($model, 'slist_name')->textInput(['maxlength' => 255])->label('Service') ?>
 
@@ -25,18 +25,7 @@ use kartik\widgets\DateTimePicker;
 	<?php echo $form->field($model, 'slist_type')->dropDownList(['Immigrant Visa' => 'Immigrant Visa', 'Non Immigrant Visa' => 'Non Immigrant Visa', 'Special Visa' => 'Special Visa'], ['prompt'=>'Select Visa Type...']); ?>
            
 	
-    <?= $form->field($model, 'slist_dateadded')->widget(DateTimePicker::classname(), [
-        'readonly' => true,
-        'options' => ['placeholder' => 'Date Added ...'],
-        'pluginOptions' => [
-            'autoclose' => true,            
-            'format' => 'yyyy-mm-dd hh:ii:ss',
-        ]
-    ]); ?>
-
-    <br>
-    <br>
-    <br>
+    <?= $form->field($model, 'slist_dateadded')->hiddenInput()->label(false) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

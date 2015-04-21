@@ -15,20 +15,13 @@ use common\models\ServiceList;
 
     <?php $form = ActiveForm::begin(); ?>
 
-     <?= $form->field($model, 'rlist_id')->textInput(array('readonly' => true, 'placeholder' => 'Requirement ID is auto-generated.'))->label('Requirement ID')?>
+     <?= $form->field($model, 'rlist_id')->hiddenInput()->label(false) ?>
 
     <?= $form->field($model, 'rlist_name')->textInput(['maxlength' => 255])->label('Requirement') ?>
 
     <?= $form->field($model, 'rlist_desc')->textarea(['rows' => 6])->label('Description') ?>
 
-    <?= $form->field($model, 'rlist_dateadded')->widget(DateTimePicker::classname(), [
-        'readonly' => true,
-        'options' => ['placeholder' => 'Date Added ...'],
-        'pluginOptions' => [
-            'autoclose' => true,            
-            'format' => 'yyyy-mm-dd hh:ii:ss',
-        ]
-    ]); ?>
+    <?= $form->field($model, 'rlist_dateadded')->hiddenInput()->label(false) ?>
 
   	<?php
 	        $ServiceList=ServiceList::find()->all();

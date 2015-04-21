@@ -26,7 +26,7 @@ $this->title = 'RBA Consultancy and General Services';
                 <h2>Visa Applications</h2>
 
                 <p>Pending: <b><?= $penAppCount ?></b> </p>
-                <p>Ongoind: <b><?= $ongoingAppCount ?></b> </p>
+                <p>Ongoing: <b><?= $ongoingAppCount ?></b> </p>
                 <p>Completed: <b><?= $comAppCount ?></b> </p>
 
                 <p><a class="btn btn-default" href=".\index.php?r=services%2Findex">Manage Visa Applcations &raquo;</a></p>

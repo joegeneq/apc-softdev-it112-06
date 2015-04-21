@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 05, 2015 at 01:19 PM
+-- Generation Time: Apr 21, 2015 at 12:50 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -125,7 +125,7 @@ CREATE TABLE IF NOT EXISTS `requirements_list` (
   `rlist_desc` text,
   `rlist_dateadded` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `slist_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `requirements_list`
@@ -165,7 +165,9 @@ INSERT INTO `requirements_list` (`rlist_id`, `rlist_name`, `rlist_desc`, `rlist_
 (35, 'NICA Clearance for Conversion to Quota Immigrant', 'Original copy of National Intelligence Coordinating Agency Clearance', '2015-03-10 08:57:10', 7),
 (36, 'LEA Clearance for Conversion to Quota Immigrant', 'Original Copy of Clearance form from the Law Enforcement Agency of the Applicant''s country of origin, provided, that this requirements may be waived if the applicant has stayed in the Philippines for more than 2 years.', '2015-03-10 08:58:34', 7),
 (37, 'NBI Clearance', 'Original copy of National Bureau of Investigation Clearance', '2015-03-10 08:59:05', 7),
-(38, 'Proof of Applicant''s Special Qualification for Conversion to Quota Immigrant', 'Proof of Applicant''s Special Qualification like academic degrees, awards, certificate of recognition and other documents attesting to applicant''s special qualification, skills or knowledge, or proof of financial capacity or investment', '2015-03-10 09:01:10', 7);
+(38, 'Proof of Applicant''s Special Qualification for Conversion to Quota Immigrant', 'Proof of Applicant''s Special Qualification like academic degrees, awards, certificate of recognition and other documents attesting to applicant''s special qualification, skills or knowledge, or proof of financial capacity or investment', '2015-03-10 09:01:10', 7),
+(39, 'Sample Requirements', '', '2015-04-16 02:25:10', 3),
+(40, 'Sample 2', '', '2015-04-16 02:26:09', 5);
 
 -- --------------------------------------------------------
 
@@ -177,25 +179,11 @@ CREATE TABLE IF NOT EXISTS `requirements_per_user` (
 `rpu_id` int(11) NOT NULL,
   `rpu_status` varchar(255) NOT NULL DEFAULT 'Not Yet Submitted',
   `rpu_datefilesubmitted` timestamp NULL DEFAULT NULL,
-  `rpu_fileuploaded` varchar(255) DEFAULT NULL,
+  `rpu_fileuploaded` varchar(255) DEFAULT '',
   `rlist_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `service_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `requirements_per_user`
---
-
-INSERT INTO `requirements_per_user` (`rpu_id`, `rpu_status`, `rpu_datefilesubmitted`, `rpu_fileuploaded`, `rlist_id`, `user_id`, `service_id`) VALUES
-(29, 'Not Yet Submitted', NULL, NULL, 7, 3, 5),
-(30, 'Not Yet Submitted', NULL, NULL, 13, 3, 5),
-(31, 'Not Yet Submitted', NULL, NULL, 27, 3, 5),
-(32, 'Not Yet Submitted', NULL, NULL, 28, 3, 5),
-(33, 'Not Yet Submitted', NULL, NULL, 29, 3, 5),
-(34, 'Not Yet Submitted', NULL, NULL, 30, 3, 5),
-(35, 'Not Yet Submitted', NULL, NULL, 31, 3, 5),
-(36, 'Not Yet Submitted', NULL, NULL, 32, 3, 5);
+) ENGINE=InnoDB AUTO_INCREMENT=235 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -209,14 +197,7 @@ CREATE TABLE IF NOT EXISTS `services` (
   `slist_id` int(11) NOT NULL,
   `service_dateapplied` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `service_status` varchar(255) NOT NULL DEFAULT 'Pending'
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `services`
---
-
-INSERT INTO `services` (`service_id`, `user_id`, `slist_id`, `service_dateapplied`, `service_status`) VALUES
-(5, 3, 3, '0000-00-00 00:00:00', 'Pending');
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
 --
 -- Triggers `services`
@@ -225,7 +206,7 @@ DELIMITER //
 CREATE TRIGGER `after_insert_service` AFTER INSERT ON `services`
  FOR EACH ROW BEGIN
 
-		INSERT INTO requirements_per_user (rlist_id, user_id, service_id) SELECT requirements_list.rlist_id, services.user_id, services.service_id FROM `requirements_list`, `service_list`, `services` WHERE requirements_list.slist_id = service_list.slist_id and services.slist_id = service_list.slist_id and services.user_id = NEW.user_id;
+		INSERT INTO requirements_per_user (rlist_id, user_id, service_id) SELECT requirements_list.rlist_id, services.user_id, services.service_id FROM `requirements_list`, `service_list`, `services` WHERE requirements_list.slist_id = services.slist_id and services.slist_id = service_list.slist_id and services.user_id = NEW.user_id;
 		
     END
 //
@@ -290,7 +271,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `user_birthdate` date DEFAULT NULL,
   `user_age` int(2) DEFAULT NULL,
   `user_type` varchar(15) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Client'
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `user`
@@ -299,7 +280,8 @@ CREATE TABLE IF NOT EXISTS `user` (
 INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `password_reset_token`, `email`, `status`, `created_at`, `updated_at`, `user_lastname`, `user_firstname`, `user_midname`, `user_mobile`, `user_telephone`, `user_housenum`, `user_street`, `user_city`, `user_country`, `user_postalcode`, `user_gender`, `user_companyname`, `user_companyadd`, `user_companycontact`, `user_birthdate`, `user_age`, `user_type`) VALUES
 (1, 'Administrator', '1W4u1_HcePQR7B68P3APwwVOLoDcWzeo', '$2y$13$eWB9VM3HSlG81.1CYAGBP.iyLcDB0ylPWIHoOCJgo91h3S3/Qv7zi', '', 'admin@email.com', 10, 1428038869, 1428038869, 'Admin', 'Admin', '', '09153480313', '09153480313', '', 'Pasay', 'Pasay City', 'Philippines', 0, '', '', '', '', NULL, NULL, 'Admin'),
 (2, 'jessica', 'mAUPMo6NlUUe3hviPPBdGefUBH9PyvLc', '$2y$13$9O7VKYbSlL62y/2W73S0mOyHzHDkmo.vsvLQVIHKcVtcbz1YMIFRO', NULL, 'martinezjecca@mail.com', 10, 1425913183, 1425913183, 'Martinez', 'Jessica', NULL, '', NULL, NULL, NULL, '', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, 'Client'),
-(3, 'Kayzelle', 'VNVMl94SN5m-sJQtEZT1-Jp7yqm2s7JT', '$2y$13$s3HXhao0oCEJUPT9Cjt3du6ShLF6SSiPKG7RKtJ7sdG7Un2lHCeEu', NULL, 'kayzellegabalfin@gmail.com', 10, 1426034711, 1426034711, 'Gabalfin', 'Kayzelle', NULL, '', NULL, NULL, NULL, '', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, 'Client');
+(3, 'Kayzelle', 'VNVMl94SN5m-sJQtEZT1-Jp7yqm2s7JT', '$2y$13$s3HXhao0oCEJUPT9Cjt3du6ShLF6SSiPKG7RKtJ7sdG7Un2lHCeEu', NULL, 'kayzellegabalfin@gmail.com', 10, 1426034711, 1426034711, 'Gabalfin', 'Kayzelle', NULL, '', NULL, NULL, NULL, '', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, 'Client'),
+(4, 'Troi', '2W99U7oKfc-oYDMGDdp1dHg4qnSx53Dt', '$2y$13$do9IlTlA9Q71mMGm3QpSqewHtF8zoLjqer58KPj.dq6C/SpWEDbzy', NULL, 'troiraymund@gmail.com', 10, 1428467277, 1428467277, 'Mendoza', 'Troi', NULL, '', NULL, NULL, NULL, '', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, 'Client');
 
 --
 -- Indexes for dumped tables
@@ -384,17 +366,17 @@ MODIFY `plist_id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `requirements_list`
 --
 ALTER TABLE `requirements_list`
-MODIFY `rlist_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=39;
+MODIFY `rlist_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=41;
 --
 -- AUTO_INCREMENT for table `requirements_per_user`
 --
 ALTER TABLE `requirements_per_user`
-MODIFY `rpu_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=44;
+MODIFY `rpu_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=235;
 --
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-MODIFY `service_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `service_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `service_list`
 --
@@ -404,7 +386,7 @@ MODIFY `slist_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
 --
 -- Constraints for dumped tables
 --
@@ -444,7 +426,7 @@ ADD CONSTRAINT `requirements_list_fk_1` FOREIGN KEY (`slist_id`) REFERENCES `ser
 -- Constraints for table `requirements_per_user`
 --
 ALTER TABLE `requirements_per_user`
-ADD CONSTRAINT `requirements_per_user_fk_2` FOREIGN KEY (`rlist_id`) REFERENCES `requirements_list` (`rlist_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ADD CONSTRAINT `requirements_per_user_fk_1` FOREIGN KEY (`rlist_id`) REFERENCES `requirements_list` (`rlist_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `services`

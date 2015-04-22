@@ -127,20 +127,24 @@ class SiteController extends Controller
    public function actionServices()
     {
        
-		
-		$model = new Services();               
-        $model->user_id = Yii::$app->user->identity->id; 
+	   
+		$model = new Services(); 	
+        //$model->user_id = Yii::$app->user->identity->id; 
        // $model->slist_id = 7;
-		
-		
-            
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-             return $this->redirect('index.php');
-        } else {
-            return $this->render('services', [
-                'model' => $model,
-            ]);
+			 if (Yii::$app->user->isGuest) {
+            return $this->render('sample-services1');
         }
+		
+				if ($model->user_id = Yii::$app->user->identity->id){
+                if ($model->load(Yii::$app->request->post()) && $model->save()) {
+				
+					return $this->redirect('index.php');
+				}  }
+	
+           return $this->render('services', [
+                'model' => $model,
+            ]);	
+        
     }
 
     public function actionServices_1()

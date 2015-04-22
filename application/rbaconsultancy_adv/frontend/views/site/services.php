@@ -44,8 +44,8 @@ use yii\grid\GridView;
                         echo "<li><a href=\"./index.php?r=site%2Flogout\">Logout, " . (Yii::$app->user->identity->username) . "</a></li>" ;
 					}
 				}
-				?>                    
-                </ul>
+				?>  
+            </ul>
 			</div>	</div>
 		
 		</div>	
@@ -100,7 +100,7 @@ use yii\grid\GridView;
 										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
 										otherwise your application or petition cannot be processed immediately.</strong><br></p>
 									<div class="services1-form">
-
+										
 										<?php $form = ActiveForm::begin(); ?>
 
 										<?= Html::activeHiddenInput($model, 'user_id') ?>
@@ -146,6 +146,7 @@ use yii\grid\GridView;
 										it, with English translation, if written in other foreign language.</strong><br>
 										<strong>5. All documents required for submission must be arranged in the order as listed hereunder,
 										otherwise your application or petition cannot be processed immediately.</strong><br></p>
+									
 									<div class="services1-form">
 
 										<?php $form = ActiveForm::begin(); ?>

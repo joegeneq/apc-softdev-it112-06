@@ -2,7 +2,9 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\helpers\ArrayHelper;
 
+use common\models\UserMain;
 /* @var $this yii\web\View */
 /* @var $searchModel frontend\models\UserSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */

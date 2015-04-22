@@ -3,9 +3,9 @@
 namespace backend\controllers;
 
 use Yii;
-use common\models\Servicelist;
-use common\models\ServicelistSearch;
-use common\models\Requirementslist;
+use common\models\ServiceList;
+use common\models\ServiceListSearch;
+use common\models\RequirementsList;
 use common\models\RequirementsListSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

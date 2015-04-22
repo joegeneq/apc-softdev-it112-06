@@ -23,8 +23,6 @@ F.height = F.contentWindow.document.body.scrollHeight+30; //IE6, IE7 and Chrome
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use dosamigos\datepicker\DatePicker;
-
 /* @var $this yii\web\View */
 /* @var $model common\models\UserMain */
 /* @var $form yii\widgets\ActiveForm */

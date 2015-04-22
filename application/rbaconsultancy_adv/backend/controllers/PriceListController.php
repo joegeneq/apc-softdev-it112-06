@@ -3,8 +3,8 @@
 namespace backend\controllers;
 
 use Yii;
-use common\models\Pricelist;
-use common\models\PricelistSearch;
+use common\models\PriceList;
+use common\models\PriceListSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

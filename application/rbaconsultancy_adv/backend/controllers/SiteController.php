@@ -7,7 +7,7 @@ use yii\web\Controller;
 use common\models\LoginForm;
 use yii\filters\VerbFilter;
 use yii\web\ForbiddenHttpException;
-use common\models\Servicelist;
+use common\models\ServiceList;
 use common\models\UserMain;
 use common\models\Services;
 

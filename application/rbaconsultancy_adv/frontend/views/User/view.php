@@ -21,9 +21,6 @@ use yii\widgets\DetailView;
              ['attribute' => 'id', 'label' => 'User ID'],
             ['attribute' => 'username', 'label' => 'Username'],
             ['attribute' => 'email', 'label' => 'Email Address'],
-            //'auth_key',
-            //'password_hash',
-            //'password_reset_token',
             ['attribute' => 'status', 'label' => 'Status'],
             ['attribute' => 'created_at', 'label' => 'Date Account Created'],
             ['attribute' => 'updated_at', 'label' => 'Date Last Updated'],
@@ -43,7 +40,6 @@ use yii\widgets\DetailView;
             ['attribute' => 'user_companycontact','label' => 'Company Contact No.'],
             ['attribute' => 'user_birthdate','label' => 'Birth Date'],
             ['attribute' => 'user_age','label' => 'Age'],
-            //['attribute' => 'user_type','label' => 'Type'],
         ],
     ]) ?>
 

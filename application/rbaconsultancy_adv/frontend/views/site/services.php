@@ -27,8 +27,7 @@ use yii\grid\GridView;
                 <ul>
                     <li><a href="./index.php">Home</a></li>
                     <li><a href="./index.php?r=site%2Fabout">About</a></li>
-                    <li class="active"><a href="./index.php?r=site%2Fservices">Services</a></li>
-                    <li><a href="./index.php?r=site%2Fcontact">Contact</a></li>
+                       <li><a href="./index.php?r=site%2Fcontact">Contact</a></li>
 				<?php
 
 				if (Yii::$app->user->isGuest) {
@@ -38,7 +37,8 @@ use yii\grid\GridView;
 					if(Yii::$app->user->can('access-backend')) {
 						echo "<li><a href=\"http://localhost/rbaconsultancy_adv/backend/web/index.php\" target=\"_blank\">Admin's Panel</a></li>" ;
 						echo "<li><a href=\"./index.php?r=site%2Flogout\">Logout, " . (Yii::$app->user->identity->username) . "</a></li>" ;
-					} else {						
+					} else {		
+						echo " <li class=\"active\"><a href=\"./index.php?r=site%2Fservices\">Services</a></li>";
 						echo "<li><a href=\"./index.php?r=site%2Fmy-account\">My Account</a></li>" ;
 						echo "<li><a href=\"./index.php?r=site%2Fmy-visa\">My Visa Application</a></li>" ;
                         echo "<li><a href=\"./index.php?r=site%2Flogout\">Logout, " . (Yii::$app->user->identity->username) . "</a></li>" ;

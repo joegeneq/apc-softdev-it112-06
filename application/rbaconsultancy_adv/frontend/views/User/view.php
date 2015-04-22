@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-
+use common\models\UserMain;
 /* @var $this yii\web\View */
 /* @var $model frontend\models\User */
 

@@ -20,7 +20,7 @@ $this->title = 'RBA Consultancy and General Services';
 
                 <p>Total: <b><?= $servicesCount ?></b> </p>
 
-                <p><a class="btn btn-default" href=".\index.php?r=servicelist%2Findex">Manage Services &raquo;</a></p>
+                <p><a class="btn btn-default" href=".\index.php?r=service-list%2Findex">Manage Services &raquo;</a></p>
             </div>
             <div class="col-lg-4">
                 <h2>Visa Applications</h2>

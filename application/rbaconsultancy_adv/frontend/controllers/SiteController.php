@@ -135,7 +135,7 @@ class SiteController extends Controller
 		
             
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-             return $this->redirect('../../frontend/web/index.php?r=site%2Fservices');
+             return $this->redirect('index.php');
         } else {
             return $this->render('services', [
                 'model' => $model,

@@ -67,7 +67,7 @@ use common\models\ServiceList;
         ]);
     ?>
 
-<iframe width="100%" id="myFrame" src="./index.php?r=requirementsperuser%2Findex&RequirementsPerUserSearch%5Bservice_id%5D=<?= $model->service_id?>"
+<iframe width="100%" id="myFrame" src="./index.php?r=requirements-per-user%2Findex&RequirementsPerUserSearch%5Bservice_id%5D=<?= $model->service_id?>"
     scrolling="no" frameborder="0" onload="sizeFrame('myFrame')">
 </iframe>
 
